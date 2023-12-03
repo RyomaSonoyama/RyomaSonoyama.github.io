@@ -135,3 +135,10 @@ footer {
         display: block; /* デスクトップ用画像を表示 */
     }
 }
+
+.research__sectionTitle {
+    font-size: 24px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    /* その他のスタイル */
+}
