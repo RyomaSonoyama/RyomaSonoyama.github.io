@@ -59,7 +59,7 @@ body {
 /* プロフィール画像のスタイル */
 .profile__img--sp, .profile__img--dt {
     /* width: 100%; */
-    width: 500px; /* 幅を500ピクセルに設定 */
+    width: 200px; /* 幅を200ピクセルに設定 */
     height: auto;
     border-radius: 5px;
 }
