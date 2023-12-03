@@ -1,0 +1,11 @@
+/* main.css */
+
+.header__wrapper {
+    position: fixed; /* ヘッダーを固定 */
+    top: 0; /* 上部から0の位置に固定 */
+    width: 100%; /* 幅を画面いっぱいに */
+    background: #fff; /* 背景色を白に設定 */
+    z-index: 10; /* 他の要素より前面に表示 */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* 影を追加 */
+}
+
