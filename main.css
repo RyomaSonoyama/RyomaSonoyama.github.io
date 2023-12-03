@@ -142,3 +142,43 @@ footer {
     margin-bottom: 10px;
     /* その他のスタイル */
 }
+
+/* リサーチセクションのコンテンツをフレックスコンテナとして設定 */
+.research__wrapper .research__overview {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-wrap: wrap;
+}
+
+/* 画像を左に、テキストを右に配置 */
+.research__overview div,
+.research__overview img {
+    flex: 1; /* 各要素が均等にスペースを占めるように */
+}
+
+/* 画像の最大幅を設定し、レスポンシブ対応をする */
+.research__overview img {
+    max-width: 50%; /* 画像の幅をコンテナの50%に */
+    height: auto; /* 高さは自動で調整 */
+    margin-right: 20px; /* テキストとの間にマージンを設定 */
+}
+
+/* テキストコンテンツのフレックスアイテム設定 */
+.research__overview div {
+    flex: 2; /* テキスト部分が画像よりも広がりやすくなる */
+}
+
+/* レスポンシブ対応：画面幅が狭い時には縦に並べる */
+@media (max-width: 768px) {
+    .research__overview {
+        flex-direction: column;
+    }
+    .research__overview img {
+        max-width: 100%; /* スマホビューでは画像を100%幅に */
+        margin-bottom: 20px; /* 画像とテキストの間にマージンを設定 */
+    }
+    .research__overview div {
+        flex: none; /* スマホビューではフレックスアイテムの幅を自動調整しない */
+    }
+}
