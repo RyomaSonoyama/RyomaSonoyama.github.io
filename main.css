@@ -143,42 +143,54 @@ footer {
     /* その他のスタイル */
 }
 
-/* リサーチセクションのコンテンツをフレックスコンテナとして設定 */
-.research__wrapper .research__overview {
+/* Flexboxを使用してリサーチセクションのアイテムを横並びにする */
+.research__overview {
     display: flex;
     align-items: center;
-    justify-content: start;
-    flex-wrap: wrap;
+    justify-content: flex-start; /* 左揃え */
+    margin-top: 20px;
 }
 
-/* 画像を左に、テキストを右に配置 */
-.research__overview div,
+/* 画像スタイル */
 .research__overview img {
-    flex: 1; /* 各要素が均等にスペースを占めるように */
+    max-width: 100px; /* 画像の最大幅を200pxに設定 */
+    margin-right: 20px; /* 画像とテキストの間隔を設定 */
+    height: auto; /* 高さは自動調整 */
 }
 
-/* 画像の最大幅を設定し、レスポンシブ対応をする */
-.research__overview img {
-    max-width: 50%; /* 画像の幅をコンテナの50%に */
-    height: auto; /* 高さは自動で調整 */
-    margin-right: 20px; /* テキストとの間にマージンを設定 */
+/* テキストブロックを画像の右側に配置する */
+.research__overview .research__description {
+    flex: 1; /* 残りのスペースを使ってテキストを広げる */
 }
 
-/* テキストコンテンツのフレックスアイテム設定 */
-.research__overview div {
-    flex: 2; /* テキスト部分が画像よりも広がりやすくなる */
+/* テキスト内の各要素のスタイリング */
+.research__description h3 {
+    margin-top: 0;
 }
 
-/* レスポンシブ対応：画面幅が狭い時には縦に並べる */
+.research__description p {
+    margin-bottom: 0.5em;
+}
+
+/* リンクアイコンのスタイル */
+.research__description i {
+    margin-right: 5px;
+}
+
+/* レスポンシブ対応：画面が狭い時には縦並びにする */
 @media (max-width: 768px) {
     .research__overview {
         flex-direction: column;
+        align-items: flex-start; /* 縦並びの時は左揃え */
     }
+
     .research__overview img {
-        max-width: 100%; /* スマホビューでは画像を100%幅に */
-        margin-bottom: 20px; /* 画像とテキストの間にマージンを設定 */
+        max-width: 100%; /* スマートフォンでは画像の幅を100%に */
+        margin-bottom: 20px; /* 画像の下のマージン */
     }
-    .research__overview div {
-        flex: none; /* スマホビューではフレックスアイテムの幅を自動調整しない */
+
+    .research__overview .research__description {
+        flex: none; /* スマートフォンではフレックスアイテムを拡張しない */
     }
 }
+
