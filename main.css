@@ -1,11 +1,129 @@
-/* main.css */
-
-.header__wrapper {
-    position: fixed; /* ヘッダーを固定 */
-    top: 0; /* 上部から0の位置に固定 */
-    width: 100%; /* 幅を画面いっぱいに */
-    background: #fff; /* 背景色を白に設定 */
-    z-index: 10; /* 他の要素より前面に表示 */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* 影を追加 */
+/* CSSの基本スタイル設定 */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    font-size: 16px;
+    background: #f4f4f4;
+    color: #333;
 }
 
+/* ヘッダーの固定とスタイル設定 */
+.header__wrapper {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #ffffff;
+    z-index: 999;
+    border-bottom: 1px solid #dddddd;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.header__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.header__logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.header__menu a {
+    text-decoration: none;
+    color: #333;
+    margin: 0 10px;
+}
+
+.header__menu a:hover {
+    color: #007bff;
+}
+
+/* ヘッダーの高さ分のパディングを追加 */
+body {
+    padding-top: 60px; /* ヘッダーの高さに合わせて調整 */
+}
+
+/* セクションのスタイリング */
+.section__wrapper {
+    margin: 20px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* プロフィール画像のスタイル */
+.profile__img--sp, .profile__img--dt {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* テキストセクションのスタイリング */
+.text__wrapper {
+    padding: 15px;
+}
+
+.text__wrapper h1 {
+    margin-top: 0;
+}
+
+/* リストのスタイリング */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    padding: 5px 0;
+}
+
+/* リンクのスタイリング */
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* フッターのスタイリング */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* メディアクエリーでレスポンシブ対応 */
+@media (max-width: 768px) {
+    .header__menu {
+        display: none; /* 小さい画面ではメニューを非表示にする */
+    }
+
+    .profile__img--sp {
+        display: block; /* スマートフォン用画像を表示 */
+    }
+
+    .profile__img--dt {
+        display: none; /* デスクトップ用画像を非表示 */
+    }
+}
+
+@media (min-width: 769px) {
+    .profile__img--sp {
+        display: none; /* スマートフォン用画像を非表示 */
+    }
+
+    .profile__img--dt {
+        display: block; /* デスクトップ用画像を表示 */
+    }
+}
