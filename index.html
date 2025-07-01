@@ -41,6 +41,10 @@
                 <a href="./publications.html">Publication</a> /
                 <a href="./playground.html">Playground</a>
             </div>
+            <div style="margin-left:20px;">
+                <button id="lang-ja" onclick="switchLang('ja')">日本語</button>
+                <button id="lang-en" onclick="switchLang('en')">English</button>
+            </div>
         </div>
     </header>
     <div class="profile__wrapper section__wrapper">
@@ -50,11 +54,10 @@
             <div class="text__wrapper">
                 <h1>Profile</h1>
                 <p>
-                    Ryoma has been a Master's student at the University of Tokyo since 2024.04.
-                    <br /> <br />
+                    Ryoma Sonoyama received the B.E. degree in Mechano-Informatics and the M.S. degree in Information Science and Technology from the University of Tokyo, Tokyo, Japan, in 2023 and 2025, respectively, where he is currently pursuing the Ph.D. degree in Information Science and Technology.
                 </p>
                 <p>
-                    My research interest includes exploring wireless systems for smart interface between humans and machines.
+                    Since 2023, he has been researching on terahertz technologies. His research interests include wireless communication and wireless sensing.
                 </p>
 
                 <ul>
@@ -64,9 +67,9 @@
                             Vitae</a> (Coming Soon)
                     </li>
                     <li>
-                        <a href="https://scholar.google.co.jp/"
+                        <a href="https://scholar.google.com/citations?hl=en&user=y8nu4VcAAAAJ"
                             onClick="ga('send', 'event', 'Google Scholar', 'click', 'Google Scholar');">Google
-                            Scholar</a>(Coming Soon)
+                            Scholar</a>
                     </li>
                     <li>
                         <a href="https://note.com/unicorn__unicorn">Research Blog (Japanese)</a>
@@ -76,6 +79,30 @@
                     </li>
                 </ul>
             </div>
+        </div>
+    </div>
+    <div class="achievements__wrapper section__wrapper">
+        <div class="text__wrapper">
+            <h1 class="lang-ja">成果物一覧</h1>
+            <h1 class="lang-en" style="display:none;">Achievements</h1>
+            <ol class="lang-ja">
+                <li>研究発表（口頭・発表予定）(国際査読あり) 園山遼馬, 門内 靖明 (2025),「Omnidirectional Terahertz Fan Beam Steering Using Two-axis Reflective Gimbal」, IRMMW2025, Espoo (Finland), 2025年8月</li>
+                <li>研究発表（口頭）(国際査読あり) 園山遼馬, 稲見 昌彦, 門内 靖明 (2025),「A Compact Fan-Beam Steering Antenna With Omnidirectional Coverage in the 300 GHz Range」, ICMMTS2025, Dubai (UAE), 2025年2月</li>
+                <li>研究発表（口頭）(国際査読あり) 園山遼馬, 稲見 昌彦, 門内 靖明 (2024),「A Center-Fed Tilt-Controlled Terahertz Waveguide for Circular Beam Steering」, IRMMW2024, Perth (Australia), 2024年9月</li>
+                <li>研究発表（展示）(国内査読なし) 園山遼馬, 旭博佑, 小谷七海, 正田千宙 (2023), 聖剣を継ぐ者 - 集中の証明 -, 第28回日本バーチャルリアリティ学会, 東京, 2023年9月</li>
+                <li>受賞　"聖剣を継ぐ者 - 集中の証明 -" 園山遼馬，旭博佑，小谷七海，正田千宙, 第28回日本バーチャルリアリティ学会大会IVRC Leap stage VoxelKei Award(審査員賞)</li>
+                <li>受賞　"聖剣を継ぐ者 - 集中の証明 -" 園山遼馬，旭博佑，小谷七海，正田千宙, 日テレイマジナリウム 審査員奨励賞</li>
+                <li>資格 第一級陸上無線技術士 (2024年1月合格、合格率約20%)</li>
+            </ol>
+            <ol class="lang-en" style="display:none;">
+                <li>Oral Presentation (International, Peer-reviewed, Scheduled): Ryoma Sonoyama, Yasuaki Monnai (2025), "Omnidirectional Terahertz Fan Beam Steering Using Two-axis Reflective Gimbal", IRMMW2025, Espoo (Finland), August 2025</li>
+                <li>Oral Presentation (International, Peer-reviewed): Ryoma Sonoyama, Masahiko Inami, Yasuaki Monnai (2025), "A Compact Fan-Beam Steering Antenna With Omnidirectional Coverage in the 300 GHz Range", ICMMTS2025, Dubai (UAE), February 2025</li>
+                <li>Oral Presentation (International, Peer-reviewed): Ryoma Sonoyama, Masahiko Inami, Yasuaki Monnai (2024), "A Center-Fed Tilt-Controlled Terahertz Waveguide for Circular Beam Steering", IRMMW2024, Perth (Australia), September 2024</li>
+                <li>Exhibition Presentation (Domestic, Not Peer-reviewed): Ryoma Sonoyama, Hirosuke Asahi, Nanami Kotani, Chihiro Shoda (2023), The Legend of Holy Sword - Proof of Concentration -, 28th Annual Conference of the Virtual Reality Society of Japan, Tokyo, September 2023</li>
+                <li>Award: "The Legend of Holy Sword - Proof of Concentration" Ryoma Sonoyama, Hirosuke Asahi, Nanami Kotani, Chihiro Shoda, 28th Annual Conference of the Virtual Reality Society of Japan, IVRC Leap stage VoxelKei Award (Jury Prize)</li>
+                <li>Award: "The Legend of Holy Sword - Proof of Concentration" Ryoma Sonoyama, Hirosuke Asahi, Nanami Kotani, Chihiro Shoda, NTV Imaginarium Jury Encouragement Award</li>
+                <li>Qualification: First-Class Technical Radio Operator for On-The-Ground Services (Passed January 2024, Pass rate ~20%)</li>
+            </ol>
         </div>
     </div>
     <div class="news__wrapper section__wrapper">
@@ -141,8 +168,13 @@
         <div class="text__wrapper">
             <h1>Honors and Awards</h1>
             <h2>Fellowship, Scholarship and Grant-in-Aid</h2>
-            <ul>
-                <li>Coming Soon...</li>
+            <ul class="lang-ja">
+                <li>2024年度 公益財団法人岩垂奨学会奨学生</li>
+                <li>2025年4月-2028年3月 JST次世代研究者挑戦的研究プログラム（SPRING） 東京大学「グリーントランスフォーメーション（GX）を先導する高度人材育成（SPRING GX）」プロジェクト生</li>
+            </ul>
+            <ul class="lang-en" style="display:none;">
+                <li>Iwadare Scholarship Foundation, FY2024</li>
+                <li>JST SPRING GX Program, University of Tokyo, April 2025 - March 2028</li>
             </ul>
             <h2>Academic Honors and Awards</h2>
             <ul>
@@ -160,7 +192,7 @@
             <h1>Media Coverage</h1>
             <ul>
                 <li>2023.11 ITmedia NEWS,
-                    <a href="https://www.itmedia.co.jp/news/articles/2311/16/news046.html">集中力を高めないと抜けない"聖剣” 東大が開発 脳波と視線で集中力を推定</a>
+                    <a href="https://www.itmedia.co.jp/news/articles/2311/16/news046.html">集中力を高めないと抜けない"聖剣" 東大が開発 脳波と視線で集中力を推定</a>
                 </li>
             </ul>
         </div>
@@ -172,6 +204,15 @@
             <p>ryoma.sonoyama [at] star.rcast.u-tokyo.ac.jp</p>
         </div>
     </div>
+    <div style="text-align:center; color:#888; font-size:14px; margin: 40px 0 10px 0;">
+        Last updated: 2025/7/1
+    </div>
+    <script>
+        function switchLang(lang) {
+            document.querySelectorAll('.lang-ja').forEach(el => el.style.display = (lang === 'ja' ? '' : 'none'));
+            document.querySelectorAll('.lang-en').forEach(el => el.style.display = (lang === 'en' ? '' : 'none'));
+        }
+    </script>
 </body>
 
 </html>
