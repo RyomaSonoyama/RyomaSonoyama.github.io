@@ -37,109 +37,236 @@
         <div class="header__content">
             <div class="header__logo">Ryoma Sonoyama | 園山 遼馬</div>
             <div class="header__menu">
-                <a href="./index.html">Home</a> /
-                <a href="./publications.html">Publication</a> /
-                <a href="./playground.html">Playground</a>
+                <a href="./index.html" class="menu-link">Home</a>
+                <span class="menu-separator">/</span>
+                <a href="./publications.html" class="menu-link">Publication</a>
+                <span class="menu-separator">/</span>
+                <a href="./playground.html" class="menu-link">Playground</a>
             </div>
-            <div style="margin-left:20px;">
-                <button id="lang-ja" onclick="switchLang('ja')">日本語</button>
-                <button id="lang-en" onclick="switchLang('en')">English</button>
+            <div class="language-switcher">
+                <button id="lang-ja" class="lang-btn" onclick="switchLang('ja')">日本語</button>
+                <button id="lang-en" class="lang-btn active" onclick="switchLang('en')">English</button>
             </div>
         </div>
     </header>
     <div class="profile__wrapper section__wrapper">
         <div class="profile__content">
-            <img class="profile__img--sp" src="resource/img/profile/profile_mobile.jpg">
-            <img class="profile__img--dt" src="resource/img/profile/profile_desktop.jpg">
-            <div class="text__wrapper">
-                <h1 class="lang-en">Profile</h1>
-                <h1 class="lang-ja" style="display:none;">プロフィール</h1>
-                <p>
-                    Ryoma Sonoyama received the B.E. degree in Mechano-Informatics and the M.S. degree in Information Science and Technology from the University of Tokyo, Tokyo, Japan, in 2023 and 2025, respectively, where he is currently pursuing the Ph.D. degree in Information Science and Technology.
-                </p>
-                <p>
-                    Since 2023, he has been researching on terahertz technologies. His research interests include wireless communication and wireless sensing.
-                </p>
-
-                <ul>
-                    <li>
-                        <a href="./cv.html"
-                            onClick="ga('send', 'event', 'CV', 'click', 'CV');">Curriculum Vitae / CV</a>
-                    </li>
-                    <li>
-                        <a href="https://scholar.google.com/citations?hl=en&user=y8nu4VcAAAAJ"
-                            onClick="ga('send', 'event', 'Google Scholar', 'click', 'Google Scholar');">Google
-                            Scholar</a>
-                    </li>
-                    <li>
-                        <a href="https://note.com/unicorn__unicorn">Research Blog (Japanese)</a>
-                    </li>
-                    <li>
-                        <!-- <a href="">Research Blog (English)</a> -->
-                    </li>
-                </ul>
+            <div class="profile__image-container">
+                <img class="profile__img--sp" src="resource/img/profile/profile_mobile.jpg" alt="Profile Photo Mobile">
+                <img class="profile__img--dt" src="resource/img/profile/profile_desktop.jpg" alt="Profile Photo Desktop">
             </div>
-            <p class="lang-ja" style="display:none;">
-                園山遼馬は、2023年に東京大学（日本・東京）で機械情報工学の学士号を、2025年に同大学で情報理工学のマスター号を取得し、現在同大学で情報理工学博士号の取得を目指しています。
-                <br /> <br />
-            </p>
-            <p class="lang-ja" style="display:none;">
-                2023年から、テラヘルツ技術に関する研究に従事しています。研究分野は無線通信と無線センシングです。
-            </p>
+            <div class="text__wrapper profile__text">
+                <h1 class="lang-en profile__title">Profile</h1>
+                <h1 class="lang-ja profile__title" style="display:none;">プロフィール</h1>
+                
+                <div class="profile__description">
+                    <p class="lang-en">
+                        Ryoma Sonoyama received the B.E. degree in Mechano-Informatics and the M.S. degree in Information Science and Technology from the University of Tokyo, Tokyo, Japan, in 2023 and 2025, respectively, where he is currently pursuing the Ph.D. degree in Information Science and Technology.
+                    </p>
+                    <p class="lang-ja" style="display:none;">
+                        園山遼馬は、2023年に東京大学工学部機械情報工学科を卒業し、2025年に同大学情報理工学系研究科システム情報学専攻修士課程を修了しました。現在、同大学同専攻博士課程に在学中です。
+                    </p>
+                    <p class="lang-en">
+                        Since 2023, he has been researching on terahertz technologies. His research interests include wireless communication and wireless sensing.
+                    </p>
+                    <p class="lang-ja" style="display:none;">
+                        2023年から、テラヘルツ技術に関する研究に従事しています。研究分野は無線通信と無線センシングです。
+                    </p>
+                </div>
+
+                <div class="profile__links">
+                    <h3 class="lang-en">Links</h3>
+                    <h3 class="lang-ja" style="display:none;">リンク</h3>
+                    
+                    <ul class="lang-en profile__link-list">
+                        <li>
+                            <a href="./cv_ja.html" class="profile__link" onClick="ga('send', 'event', 'CV', 'click', 'CV');">
+                                <i class="fas fa-file-alt"></i>
+                                Curriculum Vitae / CV
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://scholar.google.com/citations?hl=en&user=y8nu4VcAAAAJ" class="profile__link" onClick="ga('send', 'event', 'Google Scholar', 'click', 'Google Scholar');">
+                                <i class="fas fa-graduation-cap"></i>
+                                Google Scholar
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://note.com/unicorn__unicorn" class="profile__link">
+                                <i class="fas fa-blog"></i>
+                                Research Blog (Japanese)
+                            </a>
+                        </li>
+                    </ul>
+                    
+                    <ul class="lang-ja profile__link-list" style="display:none;">
+                        <li>
+                            <a href="./cv_ja.html" class="profile__link" onClick="ga('send', 'event', 'CV', 'click', 'CV');">
+                                <i class="fas fa-file-alt"></i>
+                                履歴書 / CV
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://scholar.google.com/citations?hl=en&user=y8nu4VcAAAAJ" class="profile__link" onClick="ga('send', 'event', 'Google Scholar', 'click', 'Google Scholar');">
+                                <i class="fas fa-graduation-cap"></i>
+                                Google Scholar
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://note.com/unicorn__unicorn" class="profile__link">
+                                <i class="fas fa-blog"></i>
+                                研究ブログ
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
     <div class="achievements__wrapper section__wrapper">
         <div class="text__wrapper">
-            <h1 class="lang-ja">成果物一覧</h1>
-            <h1 class="lang-en" style="display:none;">Achievements</h1>
-            <div>
-                <ul class="lang-ja peer-reviewed-list">
-                    <li>研究発表（口頭・発表予定）(国際査読あり) 園山遼馬, Yasuaki Monnai (2025),「Omnidirectional Terahertz Fan Beam Steering Using Two-axis Reflective Gimbal」, IRMMW2025, Espoo (Finland), 2025年8月</li>
-                    <li>研究発表（口頭）(国際査読あり) 園山遼馬, Masahiko Inami, Yasuaki Monnai (2025),「A Compact Fan-Beam Steering Antenna With Omnidirectional Coverage in the 300 GHz Range」, ICMMTS2025, Dubai (UAE), 2025年2月</li>
-                    <li>研究発表（口頭）(国際査読あり) 園山遼馬, Masahiko Inami, Yasuaki Monnai (2024),「A Center-Fed Tilt-Controlled Terahertz Waveguide for Circular Beam Steering」, IRMMW2024, Perth (Australia), 2024年9月</li>
+            <h1 class="lang-ja" style="display:none;">成果物一覧</h1>
+            <h1 class="lang-en">Achievements</h1>
+            
+            <!-- 国際会議発表 -->
+            <div class="achievement__category">
+                <h2 class="lang-ja" style="display:none;">
+                    <i class="fas fa-globe"></i> 国際会議発表
+                </h2>
+                <h2 class="lang-en">
+                    <i class="fas fa-globe"></i> International Conference Presentations
+                </h2>
+                <ul class="lang-ja achievement__list" style="display:none;">
+                    <li class="achievement__item">
+                        <span class="achievement__date">2025年8月</span>
+                        <span class="achievement__content">IRMMW2025, Espoo (Finland) - 園山遼馬, Yasuaki Monnai「Omnidirectional Terahertz Fan Beam Steering Using Two-axis Reflective Gimbal」</span>
+                    </li>
+                    <li class="achievement__item">
+                        <span class="achievement__date">2025年2月</span>
+                        <span class="achievement__content">ICMMTS2025, Dubai (UAE) - 園山遼馬, Masahiko Inami, Yasuaki Monnai「A Compact Fan-Beam Steering Antenna With Omnidirectional Coverage in the 300 GHz Range」</span>
+                    </li>
+                    <li class="achievement__item">
+                        <span class="achievement__date">2024年9月</span>
+                        <span class="achievement__content">IRMMW2024, Perth (Australia) - 園山遼馬, Masahiko Inami, Yasuaki Monnai「A Center-Fed Tilt-Controlled Terahertz Waveguide for Circular Beam Steering」</span>
+                    </li>
                 </ul>
-                <ul class="lang-en" style="display:none;">
-                    <li>Oral Presentation (International, Peer-reviewed, Scheduled): Ryoma Sonoyama, Yasuaki Monnai (2025), "Omnidirectional Terahertz Fan Beam Steering Using Two-axis Reflective Gimbal", IRMMW2025, Espoo (Finland), August 2025</li>
-                    <li>Oral Presentation (International, Peer-reviewed): Ryoma Sonoyama, Masahiko Inami, Yasuaki Monnai (2025), "A Compact Fan-Beam Steering Antenna With Omnidirectional Coverage in the 300 GHz Range", ICMMTS2025, Dubai (UAE), February 2025</li>
-                    <li>Oral Presentation (International, Peer-reviewed): Ryoma Sonoyama, Masahiko Inami, Yasuaki Monnai (2024), "A Center-Fed Tilt-Controlled Terahertz Waveguide for Circular Beam Steering", IRMMW2024, Perth (Australia), September 2024</li>
+                <ul class="lang-en achievement__list">
+                    <li class="achievement__item">
+                        <span class="achievement__date">August 2025</span>
+                        <span class="achievement__content">IRMMW2025, Espoo (Finland) - Ryoma Sonoyama, Yasuaki Monnai "Omnidirectional Terahertz Fan Beam Steering Using Two-axis Reflective Gimbal"</span>
+                    </li>
+                    <li class="achievement__item">
+                        <span class="achievement__date">February 2025</span>
+                        <span class="achievement__content">ICMMTS2025, Dubai (UAE) - Ryoma Sonoyama, Masahiko Inami, Yasuaki Monnai "A Compact Fan-Beam Steering Antenna With Omnidirectional Coverage in the 300 GHz Range"</span>
+                    </li>
+                    <li class="achievement__item">
+                        <span class="achievement__date">September 2024</span>
+                        <span class="achievement__content">IRMMW2024, Perth (Australia) - Ryoma Sonoyama, Masahiko Inami, Yasuaki Monnai "A Center-Fed Tilt-Controlled Terahertz Waveguide for Circular Beam Steering"</span>
+                    </li>
                 </ul>
             </div>
-            <ul class="lang-ja peer-reviewed-list">
-                <li>研究発表（展示）(国内査読なし) 園山遼馬, 旭博佑, 小谷七海, 正田千宙 (2023), 聖剣を継ぐ者 - 集中の証明 -, 第28回日本バーチャルリアリティ学会, 東京, 2023年9月</li>
-                <li>受賞　"聖剣を継ぐ者 - 集中の証明 -" 園山遼馬，旭博佑，小谷七海，正田千宙, 第28回日本バーチャルリアリティ学会大会IVRC Leap stage VoxelKei Award(審査員賞)</li>
-                <li>受賞　"聖剣を継ぐ者 - 集中の証明 -" 園山遼馬，旭博佑，小谷七海，正田千宙, 日テレイマジナリウム 審査員奨励賞</li>
-                <li>資格 第一級陸上無線技術士 (2024年1月合格、合格率約20%)</li>
-            </ul>
-            <ul class="lang-en" style="display:none;">
-                <li>Exhibition Presentation (Domestic, Not Peer-reviewed): Ryoma Sonoyama, Hirosuke Asahi, Nanami Kotani, Chihiro Shoda (2023), The Legend of Holy Sword - Proof of Concentration -, 28th Annual Conference of the Virtual Reality Society of Japan, Tokyo, September 2023</li>
-                <li>Award: "The Legend of Holy Sword - Proof of Concentration" Ryoma Sonoyama, Hirosuke Asahi, Nanami Kotani, Chihiro Shoda, 28th Annual Conference of the Virtual Reality Society of Japan, IVRC Leap stage VoxelKei Award (Jury Prize)</li>
-                <li>Award: "The Legend of Holy Sword - Proof of Concentration" Ryoma Sonoyama, Hirosuke Asahi, Nanami Kotani, Chihiro Shoda, NTV Imaginarium Jury Encouragement Award</li>
-                <li>Qualification: First-Class Radio Operator for Land Radio Stations (Passed January 2024, Pass rate ~20%)</li>
-            </ul>
+            
+            <!-- 国内発表・展示 -->
+            <div class="achievement__category">
+                <h2 class="lang-ja" style="display:none;">
+                    <i class="fas fa-home"></i> 国内発表・展示
+                </h2>
+                <h2 class="lang-en">
+                    <i class="fas fa-home"></i> Domestic Presentations & Exhibitions
+                </h2>
+                <ul class="lang-ja achievement__list" style="display:none;">
+                    <li class="achievement__item">
+                        <span class="achievement__date">2023年9月</span>
+                        <span class="achievement__content">第28回日本バーチャルリアリティ学会, 東京 - 園山遼馬, 旭博佑, 小谷七海, 正田千宙「聖剣を継ぐ者 - 集中の証明 -」</span>
+                    </li>
+                </ul>
+                <ul class="lang-en achievement__list">
+                    <li class="achievement__item">
+                        <span class="achievement__date">September 2023</span>
+                        <span class="achievement__content">28th Annual Conference of the Virtual Reality Society of Japan, Tokyo - Ryoma Sonoyama, Hirosuke Asahi, Nanami Kotani, Chihiro Shoda "The Legend of Holy Sword - Proof of Concentration"</span>
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- 受賞 -->
+            <div class="achievement__category">
+                <h2 class="lang-ja" style="display:none;">
+                    <i class="fas fa-trophy"></i> 受賞
+                </h2>
+                <h2 class="lang-en">
+                    <i class="fas fa-trophy"></i> Awards
+                </h2>
+                <ul class="lang-ja achievement__list" style="display:none;">
+                    <li class="achievement__item">
+                        <span class="achievement__date">2023年11月</span>
+                        <span class="achievement__content">IVRC2023 審査員賞 (上位10%) - 「聖剣を継ぐ者」</span>
+                    </li>
+                    <li class="achievement__item">
+                        <span class="achievement__date">2023年11月</span>
+                        <span class="achievement__content">日テレイマジナリウム 審査員奨励賞 - 「聖剣を継ぐ者」</span>
+                    </li>
+                </ul>
+                <ul class="lang-en achievement__list">
+                    <li class="achievement__item">
+                        <span class="achievement__date">November 2023</span>
+                        <span class="achievement__content">IVRC2023 Jury Prize (top 10%) - "The Legend of Holy Sword"</span>
+                    </li>
+                    <li class="achievement__item">
+                        <span class="achievement__date">November 2023</span>
+                        <span class="achievement__content">NTV Imaginarium Jury Encouragement Award - "The Legend of Holy Sword"</span>
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- 資格 -->
+            <div class="achievement__category">
+                <h2 class="lang-ja" style="display:none;">
+                    <i class="fas fa-certificate"></i> 資格
+                </h2>
+                <h2 class="lang-en">
+                    <i class="fas fa-certificate"></i> Qualifications
+                </h2>
+                <ul class="lang-ja achievement__list" style="display:none;">
+                    <li class="achievement__item">
+                        <span class="achievement__date">2024年1月</span>
+                        <span class="achievement__content">第一級陸上無線技術士 (合格率約20%)</span>
+                    </li>
+                </ul>
+                <ul class="lang-en achievement__list">
+                    <li class="achievement__item">
+                        <span class="achievement__date">January 2024</span>
+                        <span class="achievement__content">First-Class Radio Operator for Land Radio Stations (Pass rate ~20%)</span>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
     <div class="news__wrapper section__wrapper">
         <div class="text__wrapper">
             <h1 class="lang-en">News</h1>
             <h1 class="lang-ja" style="display:none;">ニュース</h1>
-            <ul>
+            <ul class="lang-en">
                 <li>
                     2023.11, Our Project was awarded in IVRC2023 <a href="https://ivrc.net/2023/release3/">聖剣を継ぐ者</a>.
                 </li>
-
+            </ul>
+            <ul class="lang-ja" style="display:none;">
+                <li>
+                    2023.11, 私たちのプロジェクトがIVRC2023で受賞しました <a href="https://ivrc.net/2023/release3/">聖剣を継ぐ者</a>.
+                </li>
             </ul>
             <div
                 onclick="obj=document.getElementById('open-news').style; obj.display=(obj.display=='none')?'block':'none';">
                 <a style="cursor:pointer;">
                     <i class="fas fa-angle-double-down"></i>
-                    previous news
+                    <span class="lang-en">previous news</span>
+                    <span class="lang-ja" style="display:none;">過去のニュース</span>
                 </a>
             </div>
             <div id="open-news" style="display:none;clear:both;">
                 <ul>
-                    <li>
-                        Coming Soon...
-                    </li>
+                    <li class="lang-en">Coming Soon...</li>
+                    <li class="lang-ja" style="display:none;">準備中...</li>
                 </ul>
             </div>
         </div>
@@ -157,22 +284,6 @@
             </div>
             <h2 class="research__sectionTitle lang-en">Peer-Reviewed Conferences & Journals</h2>
             <h2 class="research__sectionTitle lang-ja" style="display:none;">査読付き国際会議・ジャーナル</h2>
-            <!-- Peer-Reviewed Conferences & Journals List Templates -->
-            <script type="text/template" id="peer-reviewed-list-ja">
-                <ul class="peer-reviewed-list">
-                    <li>研究発表（口頭・発表予定）(国際査読あり) 園山遼馬, Yasuaki Monnai (2025),「Omnidirectional Terahertz Fan Beam Steering Using Two-axis Reflective Gimbal」, IRMMW2025, Espoo (Finland), 2025年8月</li>
-                    <li>研究発表（口頭）(国際査読あり) 園山遼馬, Masahiko Inami, Yasuaki Monnai (2025),「A Compact Fan-Beam Steering Antenna With Omnidirectional Coverage in the 300 GHz Range」, ICMMTS2025, Dubai (UAE), 2025年2月</li>
-                    <li>研究発表（口頭）(国際査読あり) 園山遼馬, Masahiko Inami, Yasuaki Monnai (2024),「A Center-Fed Tilt-Controlled Terahertz Waveguide for Circular Beam Steering」, IRMMW2024, Perth (Australia), 2024年9月</li>
-                </ul>
-            </script>
-            <script type="text/template" id="peer-reviewed-list-en">
-                <ul class="peer-reviewed-list">
-                    <li>Oral Presentation (International, Peer-reviewed, Scheduled): Ryoma Sonoyama, Yasuaki Monnai (2025), "Omnidirectional Terahertz Fan Beam Steering Using Two-axis Reflective Gimbal", IRMMW2025, Espoo (Finland), August 2025</li>
-                    <li>Oral Presentation (International, Peer-reviewed): Ryoma Sonoyama, Masahiko Inami, Yasuaki Monnai (2025), "A Compact Fan-Beam Steering Antenna With Omnidirectional Coverage in the 300 GHz Range", ICMMTS2025, Dubai (UAE), February 2025</li>
-                    <li>Oral Presentation (International, Peer-reviewed): Ryoma Sonoyama, Masahiko Inami, Yasuaki Monnai (2024), "A Center-Fed Tilt-Controlled Terahertz Waveguide for Circular Beam Steering", IRMMW2024, Perth (Australia), September 2024</li>
-                </ul>
-            </script>
-            <!-- Where you want to inject the lists -->
             <div id="peer-reviewed-list-container-ja" class="lang-ja"></div>
             <div id="peer-reviewed-list-container-en" class="lang-en" style="display:none;"></div>
             <h2 class="research__sectionTitle">Workshops, Posters, and Demos</h2>
@@ -203,12 +314,16 @@
             <h2 class="lang-en">Fellowship, Scholarship and Grant-in-Aid</h2>
             <h2 class="lang-ja" style="display:none;">フェローシップ・奨学金・助成金</h2>
             <ul class="lang-ja">
-                <li>2024年度 公益財団法人岩垂奨学会奨学生</li>
+                <li>2025年度 丸文財団国際研究交流助成 (IRMMW-THz 2025)</li>
+                <li>2025年度 SPRING GX 国際会議派遣プログラム (IRMMW-THz 2025)</li>
                 <li>2025年4月-2028年3月 JST次世代研究者挑戦的研究プログラム（SPRING） 東京大学「グリーントランスフォーメーション（GX）を先導する高度人材育成（SPRING GX）」プロジェクト生</li>
+                <li>2024年度 公益財団法人岩垂奨学会奨学生</li>
             </ul>
             <ul class="lang-en" style="display:none;">
-                <li>Iwadare Scholarship Foundation, FY2024</li>
+                <li>Marubun Foundation International Research Exchange Grant, FY2025 (IRMMW-THz 2025)</li>
+                <li>SPRING GX International Conference Travel Program, FY2025 (IRMMW-THz 2025)</li>
                 <li>JST SPRING GX Program, University of Tokyo, April 2025 - March 2028</li>
+                <li>Iwadare Scholarship Foundation, FY2024</li>
             </ul>
             <h2 class="lang-en">Academic Honors and Awards</h2>
             <h2 class="lang-ja" style="display:none;">学術表彰・受賞</h2>
@@ -244,16 +359,98 @@
         </div>
     </div>
     <div style="text-align:center; color:#888; font-size:14px; margin: 40px 0 10px 0;">
-        Last updated: 2025/7/1
+        Last updated: 8/11/2025
     </div>
     <script>
         function switchLang(lang) {
             document.querySelectorAll('.lang-ja').forEach(el => el.style.display = (lang === 'ja' ? '' : 'none'));
             document.querySelectorAll('.lang-en').forEach(el => el.style.display = (lang === 'en' ? '' : 'none'));
+            
+            // Update button styles to show active language
+            document.getElementById('lang-ja').style.fontWeight = (lang === 'ja' ? 'bold' : 'normal');
+            document.getElementById('lang-en').style.fontWeight = (lang === 'en' ? 'bold' : 'normal');
+            
+            // Update button classes for styling
+            document.getElementById('lang-ja').classList.toggle('active', lang === 'ja');
+            document.getElementById('lang-en').classList.toggle('active', lang === 'en');
         }
-        // Inject reusable lists
-        document.getElementById('peer-reviewed-list-container-ja').innerHTML = document.getElementById('peer-reviewed-list-ja').innerHTML;
-        document.getElementById('peer-reviewed-list-container-en').innerHTML = document.getElementById('peer-reviewed-list-en').innerHTML;
+        
+        // Initialize page with English language
+        document.addEventListener('DOMContentLoaded', function() {
+            switchLang('en');
+            
+            // Add scroll animations
+            addScrollAnimations();
+            
+            // Add parallax effect to header
+            addParallaxEffect();
+            
+            // Add smooth reveal animations
+            addRevealAnimations();
+        });
+        
+        // Scroll animations for elements
+        function addScrollAnimations() {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate-in');
+                    }
+                });
+            }, observerOptions);
+            
+            // Observe all sections
+            document.querySelectorAll('.section__wrapper').forEach(section => {
+                observer.observe(section);
+            });
+        }
+        
+        // Parallax effect for header
+        function addParallaxEffect() {
+            window.addEventListener('scroll', () => {
+                const scrolled = window.pageYOffset;
+                const header = document.querySelector('.header__wrapper');
+                header.style.transform = `translateY(${scrolled * 0.5}px)`;
+            });
+        }
+        
+        // Reveal animations for achievement items
+        function addRevealAnimations() {
+            const achievementItems = document.querySelectorAll('.achievement__item');
+            
+            const itemObserver = new IntersectionObserver((entries) => {
+                entries.forEach((entry, index) => {
+                    if (entry.isIntersecting) {
+                        setTimeout(() => {
+                            entry.target.classList.add('reveal');
+                        }, index * 100);
+                    }
+                });
+            }, { threshold: 0.3 });
+            
+            achievementItems.forEach(item => itemObserver.observe(item));
+        }
+        
+        // Smooth scroll for navigation links
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        });
     </script>
 </body>
 
