@@ -667,3 +667,41 @@ a:hover, button:hover {
         font-size: 0.9rem;
     }
 }
+/* Desktop CV Timeline Enhancements */
+@media (min-width: 769px) {
+    .cv__wrapper .text__wrapper {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 2rem;
+    }
+    
+    .cv__timeline {
+        padding: 3rem 0;
+    }
+    
+    .cv__item {
+        padding-left: 4rem;
+    }
+    
+    .cv__bullet {
+        width: 18px;
+        height: 18px;
+        left: 0;
+    }
+    
+    .cv__line {
+        left: 8.5px;
+    }
+    
+    .cv__content {
+        padding: 1.5rem 2rem;
+    }
+    
+    .cv__date {
+        font-size: 1rem;
+    }
+    
+    .cv__text {
+        font-size: 1.05rem;
+    }
+}
