@@ -20,7 +20,7 @@ body, html {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 2rem;
+    padding: 1rem 2rem; Mobile Radio Systems 
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -133,10 +133,44 @@ body {
 }
 /* research画像のスタイル */
 .research__img {
-    /* width: 100%; */
-    width: 50px; /* 幅を200ピクセルに設定 */
-    height: auto;
+    width: 220px;
+    height: 150px;
+    flex-shrink: 0;
+    object-fit: contain;
+    background: #f4f5f9;
     border-radius: 5px;
+}
+
+.research__img--placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #b6bbd6;
+    font-size: 40px;
+}
+
+/* 研究項目：画像を左、説明を右に並べる */
+.research__item {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    margin: 20px 0 28px 0;
+}
+
+@media (max-width: 768px) {
+    .research__item {
+        flex-direction: column;
+    }
+
+    .research__img {
+        width: 100%;
+        height: auto;
+        max-height: 240px;
+    }
+
+    .research__img--placeholder {
+        height: 120px;
+    }
 }
 
 /* テキストセクションのスタイリング */
