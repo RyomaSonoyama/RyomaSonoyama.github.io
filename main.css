@@ -1,188 +1,23 @@
-/* CSSの基本スタイル設定 */
-body, html {
+/* ===== Base ===== */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px; /* keep anchored headings clear of the sticky header */
+}
+
+body {
     margin: 0;
-    padding: 0;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Arial', 'Hiragino Sans', 'Noto Sans JP', sans-serif;
     line-height: 1.6;
     font-size: 16px;
     background: #f4f4f4;
     color: #333;
 }
 
-/* Enhanced Header Styles */
-.header__wrapper {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-    transition: all 0.3s ease;
-}
-
-.header__content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem; Mobile Radio Systems 
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.header__logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: white;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
-}
-
-.header__menu {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
-
-.menu-link {
-    color: white;
-    text-decoration: none;
-    padding: 0.5rem 1rem;
-    border-radius: 25px;
-    transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
-}
-
-.menu-link::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: rgba(255,255,255,0.2);
-    transition: left 0.3s ease;
-}
-
-.menu-link:hover::before {
-    left: 0;
-}
-
-.menu-link:hover {
-    background: rgba(255,255,255,0.1);
-    transform: translateY(-2px);
-}
-
-.menu-separator {
-    color: rgba(255,255,255,0.6);
-    font-weight: bold;
-}
-
-.language-switcher {
-    display: flex;
-    gap: 0.5rem;
-}
-
-.lang-btn {
-    background: rgba(255,255,255,0.1);
-    border: 2px solid rgba(255,255,255,0.3);
-    color: white;
-    padding: 0.5rem 1rem;
-    border-radius: 25px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    backdrop-filter: blur(10px);
-}
-
-.lang-btn:hover {
-    background: rgba(255,255,255,0.2);
-    border-color: rgba(255,255,255,0.5);
-    transform: translateY(-2px);
-}
-
-.lang-btn.active {
-    background: rgba(255,255,255,0.3);
-    border-color: white;
-    font-weight: bold;
-    box-shadow: 0 4px 15px rgba(255,255,255,0.3);
-}
-
-/* ヘッダーの高さ分のパディングを追加 */
-body {
-    padding-top: 60px; /* ヘッダーの高さに合わせて調整 */
-}
-
-/* セクションのスタイリング */
-.section__wrapper {
-    margin: 20px;
-    padding: 20px;
-    background: #fff;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    opacity: 0;
-    transform: translateY(30px);
-    transition: all 0.8s ease;
-}
-
-.section__wrapper.animate-in {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* プロフィール画像のスタイル */
-.profile__img--sp, .profile__img--dt {
-    /* width: 100%; */
-    width: 200px; /* 幅を200ピクセルに設定 */
+img {
+    max-width: 100%;
     height: auto;
-    border-radius: 5px;
-}
-/* research画像のスタイル */
-.research__img {
-    width: 220px;
-    height: 150px;
-    flex-shrink: 0;
-    object-fit: contain;
-    background: #f4f5f9;
-    border-radius: 5px;
 }
 
-.research__img--placeholder {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #b6bbd6;
-    font-size: 40px;
-}
-
-/* 研究項目：画像を左、説明を右に並べる */
-.research__item {
-    display: flex;
-    align-items: flex-start;
-    gap: 20px;
-    margin: 20px 0 28px 0;
-}
-
-@media (max-width: 768px) {
-    .research__item {
-        flex-direction: column;
-    }
-
-    .research__img {
-        width: 100%;
-        height: auto;
-        max-height: 240px;
-    }
-
-    .research__img--placeholder {
-        height: 120px;
-    }
-}
-
-/* テキストセクションのスタイリング */
-.text__wrapper {
-    padding: 15px;
-}
-
-.text__wrapper h1 {
-    margin-top: 0;
-}
-
-/* リストのスタイリング */
 ul {
     list-style: none;
     padding: 0;
@@ -192,7 +27,6 @@ ul li {
     padding: 5px 0;
 }
 
-/* リンクのスタイリング */
 a {
     color: #007bff;
     text-decoration: none;
@@ -202,62 +36,158 @@ a:hover {
     text-decoration: underline;
 }
 
-/* フッターのスタイリング */
-footer {
-    background: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+/* ===== Language switching (driven by <html lang>) ===== */
+html[lang="en"] .lang-ja,
+html[lang="ja"] .lang-en {
+    display: none !important;
 }
 
-/* Enhanced Profile Section */
+/* ===== Header ===== */
+.header__wrapper {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.header__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.75rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header__logo {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: white;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    white-space: nowrap;
+}
+
+.header__logo:hover {
+    text-decoration: none;
+}
+
+.header__menu {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.menu-link {
+    color: white;
+    padding: 0.4rem 0.8rem;
+    border-radius: 25px;
+    transition: background 0.3s ease;
+}
+
+.menu-link:hover {
+    background: rgba(255, 255, 255, 0.2);
+    text-decoration: none;
+}
+
+.language-switcher {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.lang-btn {
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    padding: 0.4rem 0.9rem;
+    border-radius: 25px;
+    cursor: pointer;
+    font: inherit;
+    transition: all 0.3s ease;
+}
+
+.lang-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+.lang-btn.active {
+    background: rgba(255, 255, 255, 0.3);
+    border-color: white;
+    font-weight: bold;
+}
+
+/* ===== Sections ===== */
+.section__wrapper {
+    max-width: 1100px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.section__wrapper.animate-in {
+    opacity: 1;
+    transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .section__wrapper { opacity: 1; transform: none; transition: none; }
+}
+
+.text__wrapper {
+    padding: 15px;
+}
+
+.text__wrapper h1 {
+    margin-top: 0;
+    color: #2c3e50;
+}
+
+.text__wrapper h2 {
+    color: #2c3e50;
+}
+
+/* ===== Profile ===== */
 .profile__wrapper {
     background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-    padding: 4rem 0;
+    padding: 3rem 0;
 }
 
 .profile__content {
     display: grid;
     grid-template-columns: 300px 1fr;
     gap: 3rem;
-    max-width: 1200px;
-    margin: 0 auto;
     padding: 0 2rem;
 }
 
 .profile__image-container {
-    position: relative;
     align-self: start;
     border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
 }
 
-.profile__image-container:hover {
-    transform: translateY(-10px) scale(1.02);
-}
-
-.profile__img--sp,
-.profile__img--dt {
+.profile__img {
+    display: block;
     width: 100%;
     height: auto;
-    display: block;
 }
 
 .profile__text {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1.5rem;
 }
 
 .profile__title {
     font-size: 2.5rem;
-    color: #2c3e50;
-    margin-bottom: 1rem;
     position: relative;
 }
 
@@ -276,39 +206,36 @@ footer {
     font-size: 1.1rem;
     line-height: 1.8;
     color: #34495e;
-    margin-bottom: 1rem;
 }
 
 .profile__links h3 {
     font-size: 1.5rem;
     color: #2c3e50;
-    margin-bottom: 1rem;
+    margin: 0 0 1rem;
 }
 
 .profile__link-list {
-    list-style: none;
-    padding: 0;
+    margin: 0;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
     gap: 1rem;
 }
 
 .profile__link {
     display: flex;
     align-items: center;
-    gap: 1rem;
-    padding: 1rem 1.5rem;
+    gap: 0.8rem;
+    padding: 0.9rem 1.2rem;
     background: white;
     border-radius: 15px;
-    text-decoration: none;
     color: #2c3e50;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .profile__link:hover {
+    text-decoration: none;
     transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
     background: linear-gradient(135deg, #667eea, #764ba2);
     color: white;
 }
@@ -319,296 +246,26 @@ footer {
     text-align: center;
 }
 
-/* Enhanced Achievements Section */
-.achievements__wrapper {
-    background: white;
-    padding: 4rem 0;
-}
-
-.achievement__category {
-    margin-bottom: 3rem;
-    padding: 2rem;
-    background: #f8f9fa;
-    border-radius: 20px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-    transition: all 0.3s ease;
-}
-
-.achievement__category:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 30px rgba(0,0,0,0.1);
-}
-
-.achievement__category h2 {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    font-size: 1.8rem;
-    color: #2c3e50;
-    margin-bottom: 1.5rem;
-    padding-bottom: 1rem;
-    border-bottom: 2px solid #e9ecef;
-}
-
-.achievement__category h2 i {
-    color: #667eea;
-    font-size: 1.5rem;
-}
-
-.achievement__list {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-.achievement__item {
-    display: flex;
-    gap: 1.5rem;
-    padding: 1rem 1.5rem;
-    background: white;
-    border-radius: 15px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-    transition: all 0.3s ease;
-    opacity: 0;
-    transform: translateY(20px);
-}
-
-.achievement__item.reveal {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.achievement__item:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
-}
-
-.achievement__date {
-    font-weight: bold;
-    color: #667eea;
-    min-width: 120px;
-    font-size: 0.9rem;
-}
-
-.achievement__content {
-    color: #34495e;
-    line-height: 1.6;
-}
-
-/* メディアクエリーでレスポンシブ対応 */
-@media (max-width: 768px) {
-    .header__menu {
-        display: none; /* 小さい画面ではメニューを非表示にする */
-    }
-
-    .profile__img--sp {
-        display: block; /* スマートフォン用画像を表示 */
-    }
-
-    .profile__img--dt {
-        display: none; /* デスクトップ用画像を非表示 */
-    }
-
-    .profile__content {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-    
-    .profile__image-container {
-        max-width: 300px;
-        margin: 0 auto;
-    }
-    
-    .achievement__item {
-        flex-direction: column;
-        gap: 0.5rem;
-    }
-    
-    .achievement__date {
-        min-width: auto;
-        text-align: center;
-    }
-    
-    .header__content {
-        flex-direction: column;
-        gap: 1rem;
-        text-align: center;
-    }
-    
-    .header__menu {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-}
-
-@media (min-width: 769px) {
-    .profile__img--sp {
-        display: none; /* スマートフォン用画像を非表示 */
-    }
-
-    .profile__img--dt {
-        display: block; /* デスクトップ用画像を表示 */
-    }
-}
-
-.research__sectionTitle {
-    font-size: 24px;
-    margin-top: 20px;
-    margin-bottom: 10px;
-    /* その他のスタイル */
-}
-
-/* Flexboxを使用してリサーチセクションのアイテムを横並びにする */
-.research__overview {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start; /* 左揃え */
-    margin-top: 20px;
-}
-
-/* 画像スタイル */
-.research__overview img {
-    max-width: 100px; /* 画像の最大幅を200pxに設定 */
-    margin-right: 20px; /* 画像とテキストの間隔を設定 */
-    height: auto; /* 高さは自動調整 */
-}
-
-/* テキストブロックを画像の右側に配置する */
-.research__overview .research__description {
-    flex: 1; /* 残りのスペースを使ってテキストを広げる */
-}
-
-/* テキスト内の各要素のスタイリング */
-.research__description h3 {
-    margin-top: 0;
-}
-
-.research__description p {
-    margin-bottom: 0.5em;
-}
-
-/* リンクアイコンのスタイル */
-.research__description i {
-    margin-right: 5px;
-}
-
-/* レスポンシブ対応：画面が狭い時には縦並びにする */
-@media (max-width: 768px) {
-    .research__overview {
-        flex-direction: column;
-        align-items: flex-start; /* 縦並びの時は左揃え */
-    }
-
-    .research__overview img {
-        max-width: 100%; /* スマートフォンでは画像の幅を100%に */
-        margin-bottom: 20px; /* 画像の下のマージン */
-    }
-
-    .research__overview .research__description {
-        flex: none; /* スマートフォンではフレックスアイテムを拡張しない */
-    }
-}
-
-/* Peer-reviewed list custom style */
-.peer-reviewed-list {
-    background: #f9f9fc;
-    border-left: 4px solid #007bff;
-    padding: 18px 24px 18px 24px;
-    margin: 18px 0 28px 0;
-    border-radius: 6px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-}
-.peer-reviewed-list li {
-    list-style: none;
-    position: relative;
-    margin-bottom: 12px;
-    padding-left: 1.5em;
-    font-size: 1.08em;
-    line-height: 1.7;
-}
-.peer-reviewed-list li:before {
-    content: '・';
-    position: absolute;
-    left: 0;
-    color: #007bff;
-    font-size: 1.2em;
-    top: 0.1em;
-}
-
-/* Smooth scrolling */
-html {
-    scroll-behavior: smooth;
-}
-
-/* Loading animation */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.animate-in {
-    animation: fadeInUp 0.8s ease forwards;
-}
-
-/* Hover effects for all interactive elements */
-a:hover, button:hover {
-    transition: all 0.3s ease;
-}
-
-/* Custom scrollbar */
-::-webkit-scrollbar {
-    width: 8px;
-}
-
-::-webkit-scrollbar-track {
-    background: #f1f1f1;
-}
-
-::-webkit-scrollbar-thumb {
-    background: linear-gradient(135deg, #667eea, #764ba2);
-    border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(135deg, #5a6fd8, #6a4190);
-}
-
-/* CV Timeline Styles */
+/* ===== CV timeline ===== */
 .cv__wrapper {
     background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
-    padding: 4rem 0;
 }
 
 .cv__timeline {
     position: relative;
-    padding: 2rem 0;
-    margin: 2rem 0;
+    margin: 2rem 0 0;
 }
 
 .cv__item {
     position: relative;
     padding-left: 3rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     display: flex;
     align-items: flex-start;
-    gap: 1.5rem;
-    transition: all 0.3s ease;
 }
 
-.cv__item:hover {
-    transform: translateX(5px);
-}
-
-.cv__item:last-child .cv__line {
-    display: none;
+.cv__item:last-child {
+    margin-bottom: 0;
 }
 
 .cv__bullet {
@@ -622,22 +279,15 @@ a:hover, button:hover {
     border: 3px solid white;
     box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2), 0 4px 10px rgba(0, 0, 0, 0.1);
     z-index: 2;
-    transition: all 0.3s ease;
-}
-
-.cv__item:hover .cv__bullet {
-    transform: scale(1.3);
-    box-shadow: 0 0 0 5px rgba(102, 126, 234, 0.3), 0 6px 20px rgba(102, 126, 234, 0.4);
 }
 
 .cv__line {
     position: absolute;
-    left: 7.5px;
+    left: 10px;
     top: 1.5rem;
     width: 2px;
-    height: calc(100% + 1rem);
+    height: calc(100% + 0.5rem);
     background: linear-gradient(180deg, #667eea, #764ba2);
-    z-index: 1;
     opacity: 0.3;
 }
 
@@ -645,19 +295,18 @@ a:hover, button:hover {
     flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 0.3rem;
     padding: 1rem 1.5rem;
     background: white;
     border-radius: 12px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
-    transition: all 0.3s ease;
     border-left: 3px solid transparent;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .cv__item:hover .cv__content {
     border-left-color: #667eea;
     box-shadow: 0 4px 20px rgba(102, 126, 234, 0.15);
-    transform: translateX(3px);
 }
 
 .cv__date {
@@ -665,82 +314,139 @@ a:hover, button:hover {
     color: #667eea;
     font-size: 0.95rem;
     letter-spacing: 0.5px;
-    text-transform: uppercase;
 }
 
 .cv__text {
     color: #34495e;
-    line-height: 1.6;
-    font-size: 1rem;
 }
 
-/* Responsive CV Timeline */
-@media (max-width: 768px) {
-    .cv__item {
-        padding-left: 2.5rem;
-    }
-    
-    .cv__bullet {
-        width: 14px;
-        height: 14px;
-        left: -0.2rem;
-    }
-    
-    .cv__line {
-        left: 6px;
-    }
-    
-    .cv__content {
-        padding: 0.8rem 1rem;
-    }
-    
-    .cv__date {
-        font-size: 0.85rem;
-    }
-    
-    .cv__text {
-        font-size: 0.9rem;
-    }
+/* ===== Research (publications, presentations, demos) ===== */
+.research__overview {
+    font-size: 1.05rem;
+    color: #34495e;
 }
-/* Desktop CV Timeline Enhancements */
-@media (min-width: 769px) {
-    .cv__wrapper .text__wrapper {
-        max-width: 900px;
-        margin: 0 auto;
-        padding: 2rem;
-    }
-    
-    .cv__timeline {
-        padding: 3rem 0;
-    }
-    
-    .cv__item {
-        padding-left: 4rem;
-    }
-    
-    .cv__bullet {
-        width: 18px;
-        height: 18px;
-        left: 0;
-    }
-    
-    .cv__line {
-        left: 8.5px;
-    }
-    
-    .cv__content {
-        padding: 1.5rem 2rem;
-    }
-    
-    .cv__date {
-        font-size: 1rem;
-    }
-    
-    .cv__text {
-        font-size: 1.05rem;
-    }
+
+.research__sectionTitle {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 1.5rem;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #e9ecef;
 }
-/* アメフト写真ギャラリー */
+
+.research__sectionTitle i {
+    color: #667eea;
+    font-size: 1.2rem;
+}
+
+.research__item {
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+    padding: 18px;
+    margin-bottom: 16px;
+    background: #f8f9fa;
+    border-radius: 14px;
+    transition: box-shadow 0.3s ease;
+}
+
+.research__item:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.research__img {
+    width: 240px;
+    height: 160px;
+    flex-shrink: 0;
+    object-fit: contain;
+    background: #fff;
+    border-radius: 8px;
+}
+
+.research__description {
+    flex: 1;
+    min-width: 0;
+}
+
+.research__description h3 {
+    margin: 0.2rem 0 0.4rem;
+    font-size: 1.1rem;
+    line-height: 1.4;
+    color: #2c3e50;
+}
+
+.research__description p {
+    margin: 0 0 0.35rem;
+    color: #34495e;
+}
+
+.research__date {
+    font-weight: bold;
+    font-size: 0.85rem;
+    color: #667eea;
+}
+
+.research__links {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.4rem 1rem;
+    margin-top: 0.5rem !important;
+}
+
+.research__links i {
+    margin-right: 5px;
+}
+
+.research__badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.1rem 0.7rem;
+    border-radius: 999px;
+    background: #fff4d6;
+    color: #8a5a00;
+    font-size: 0.9rem;
+}
+
+.research__doi {
+    font-size: 0.85rem;
+    color: #6c757d;
+    overflow-wrap: anywhere;
+}
+
+.video-wrapper {
+    position: relative;
+    max-width: 720px;
+    aspect-ratio: 16 / 9;
+}
+
+.video-wrapper iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    border-radius: 8px;
+}
+
+/* ===== Honors ===== */
+.honors__list li {
+    padding: 6px 0 6px 1.2rem;
+    position: relative;
+}
+
+.honors__list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.95em;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #667eea;
+}
+
+/* ===== American football gallery ===== */
 .football__gallery {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -755,8 +461,131 @@ a:hover, button:hover {
     border-radius: 5px;
 }
 
+/* ===== Footer ===== */
+.footer {
+    text-align: center;
+    color: #888;
+    font-size: 14px;
+    margin: 40px 0 10px;
+}
+
+/* ===== Scrollbar ===== */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    border-radius: 4px;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 900px) {
+    .header__content {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0.6rem 1rem;
+        gap: 0.4rem 1rem;
+    }
+
+    .header__logo {
+        font-size: 1.15rem;
+    }
+
+    .header__menu {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        font-size: 0.9rem;
+    }
+
+    .lang-btn {
+        padding: 0.25rem 0.7rem;
+        font-size: 0.85rem;
+    }
+
+    html {
+        scroll-padding-top: 130px;
+    }
+}
+
 @media (max-width: 768px) {
+    .section__wrapper {
+        margin: 12px;
+        padding: 12px;
+    }
+
+    .profile__wrapper {
+        padding: 2rem 0;
+    }
+
+    .profile__content {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 0 1rem;
+    }
+
+    .profile__image-container {
+        max-width: 260px;
+        margin: 0 auto;
+    }
+
+    .profile__title {
+        font-size: 2rem;
+    }
+
+    .profile__description p {
+        font-size: 1rem;
+    }
+
+    .cv__item {
+        padding-left: 2rem;
+    }
+
+    .cv__content {
+        padding: 0.8rem 1rem;
+    }
+
+    .research__item {
+        flex-direction: column;
+        gap: 12px;
+        padding: 12px;
+    }
+
+    .research__img {
+        width: 100%;
+        height: auto;
+        max-height: 220px;
+    }
+
     .football__gallery {
         grid-template-columns: 1fr;
     }
+}
+
+/* ===== CV download / teaching ===== */
+.cv__download {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+    padding: 0.5rem 1.1rem;
+    border-radius: 999px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    font-weight: bold;
+}
+
+.cv__download:hover {
+    text-decoration: none;
+    opacity: 0.9;
+}
+
+.cv__wrapper h2 i {
+    color: #667eea;
 }

@@ -1,730 +1,429 @@
 <!-- I referred to Arakawa's portfolio. "https://rikky0611.github.io/index.html" -->
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-89152710-2"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-
-        gtag('config', 'UA-89152710-2');
-    </script>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Ryoma Sonoyama | 園山 遼馬</title>
-    <meta name="description" content="a personal page of Ryoma Sonoyama" />
+    <title>Ryoma Sonoyama | 園山 遼馬 - Terahertz Wireless Research, The University of Tokyo</title>
+    <meta name="description" content="Ryoma Sonoyama (園山遼馬), Ph.D. student at the University of Tokyo (Inami &amp; Monnai Lab, RCAST), working on terahertz wireless communication and sensing, omnidirectional beam steering, and human augmentation." />
+    <meta name="author" content="Ryoma Sonoyama" />
+    <link rel="canonical" href="https://ryomasonoyama.github.io/" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
 
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Ryoma Sonoyama" />
+    <meta property="og:type" content="profile" />
+    <meta property="og:title" content="Ryoma Sonoyama | 園山 遼馬" />
     <meta property="og:url" content="https://ryomasonoyama.github.io/" />
     <meta property="og:site_name" content="Ryoma Sonoyama" />
-    <meta property="og:description" content="a personal page of Ryoma Sonoyama" />
-    <meta property="og:image" content="https://ryomasonoyama.github.io/resource/img/profile/profile_desktop.png" />
+    <meta property="og:description" content="Ph.D. student at the University of Tokyo working on terahertz wireless communication and sensing to augment human abilities." />
+    <meta property="og:image" content="https://ryomasonoyama.github.io/resource/img/profile/profile.jpg" />
+    <meta property="og:image:width" content="579" />
+    <meta property="og:image:height" content="700" />
+    <meta property="og:image:alt" content="Ryoma Sonoyama" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:locale:alternate" content="ja_JP" />
+    <meta property="profile:first_name" content="Ryoma" />
+    <meta property="profile:last_name" content="Sonoyama" />
     <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Ryoma Sonoyama | 園山 遼馬" />
+    <meta name="twitter:description" content="Ph.D. student at the University of Tokyo working on terahertz wireless communication and sensing to augment human abilities." />
+    <meta name="twitter:image" content="https://ryomasonoyama.github.io/resource/img/profile/profile.jpg" />
 
     <meta name="robots" content="noarchive">
 
-    <link rel="shortcut icon" href="resource/img/profile/favicon.ico">
-    <link rel="stylesheet" type="text/css" href="./main.css">
-    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ProfilePage",
+        "url": "https://ryomasonoyama.github.io/",
+        "dateModified": "2026-11-16",
+        "mainEntity": {
+            "@type": "Person",
+            "name": "Ryoma Sonoyama",
+            "alternateName": ["園山遼馬", "園山 遼馬"],
+            "url": "https://ryomasonoyama.github.io/",
+            "image": "https://ryomasonoyama.github.io/resource/img/profile/profile.jpg",
+            "jobTitle": "Ph.D. Student",
+            "affiliation": {
+                "@type": "Organization",
+                "name": "Information Somatics Lab (Inami & Monnai Lab), Research Center for Advanced Science and Technology, The University of Tokyo",
+                "url": "https://star.rcast.u-tokyo.ac.jp/"
+            },
+            "alumniOf": { "@type": "CollegeOrUniversity", "name": "The University of Tokyo", "url": "https://www.u-tokyo.ac.jp/en/" },
+            "knowsAbout": ["Terahertz technology", "Terahertz wireless communication", "Terahertz sensing", "Beam steering", "Antennas", "Human augmentation"],
+            "sameAs": [
+                "https://scholar.google.com/citations?user=y8nu4VcAAAAJ",
+                "https://www.linkedin.com/in/ryoma-sonoyama-a11401282/",
+                "https://researchmap.jp/ryoma_sonoyama",
+                "https://www.researchgate.net/profile/Ryoma-Sonoyama",
+                "https://orcid.org/0009-0008-1538-6379",
+                "https://jglobal.jst.go.jp/en/detail?JGLOBAL_ID=202501013155667203"
+            ]
+        }
+    }
+    </script>
+
+    <script>
+        // Apply the saved language before first paint to avoid a flash of the wrong language.
+        try { if (localStorage.getItem('lang') === 'ja') document.documentElement.lang = 'ja'; } catch (e) {}
+    </script>
+    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
 </head>
 
 <body>
     <header class="header__wrapper">
         <div class="header__content">
-            <div class="header__logo">Ryoma Sonoyama | 園山 遼馬</div>
-            <div class="header__menu">
-                <a href="./index.html" class="menu-link">Home</a>
-                <span class="menu-separator">/</span>
-                <a href="#publications" class="menu-link">Publication</a>
-            </div>
+            <a href="#top" class="header__logo">Ryoma Sonoyama | 園山 遼馬</a>
+            <nav class="header__menu">
+                <a href="#cv" class="menu-link">CV</a>
+                <a href="#research" class="menu-link"><span class="lang-en">Research</span><span class="lang-ja">研究</span></a>
+                <a href="#honors" class="menu-link"><span class="lang-en">Honors</span><span class="lang-ja">受賞</span></a>
+                <a href="#football" class="menu-link"><span class="lang-en">Football</span><span class="lang-ja">アメフト</span></a>
+                <a href="#contact" class="menu-link"><span class="lang-en">Contact</span><span class="lang-ja">連絡先</span></a>
+            </nav>
             <div class="language-switcher">
-                <button id="lang-ja" class="lang-btn" onclick="switchLang('ja')">日本語</button>
-                <button id="lang-en" class="lang-btn active" onclick="switchLang('en')">English</button>
+                <button id="lang-ja" class="lang-btn" type="button" onclick="switchLang('ja')">日本語</button>
+                <button id="lang-en" class="lang-btn" type="button" onclick="switchLang('en')">English</button>
             </div>
         </div>
     </header>
-    <div class="profile__wrapper section__wrapper">
+
+    <main id="top">
+    <section class="profile__wrapper section__wrapper">
         <div class="profile__content">
             <div class="profile__image-container">
-                <img class="profile__img--sp" src="resource/img/profile/profile_mobile.png" alt="Profile Photo Mobile">
-                <img class="profile__img--dt" src="resource/img/profile/profile_desktop.png" alt="Profile Photo Desktop">
+                <img class="profile__img" src="resource/img/profile/profile.jpg" alt="Ryoma Sonoyama" width="579" height="700">
             </div>
             <div class="text__wrapper profile__text">
-                <h1 class="lang-en profile__title">Profile</h1>
-                <h1 class="lang-ja profile__title" style="display:none;">プロフィール</h1>
-                
+                <h1 class="profile__title"><span class="lang-en">Profile</span><span class="lang-ja">プロフィール</span></h1>
+
                 <div class="profile__description">
                     <p class="lang-en">
-                        Ryoma Sonoyama received the B.E. degree in Mechano-Informatics and the M.S. degree in Information Science and Technology from <a href="https://www.u-tokyo.ac.jp/en/" target="_blank">the University of Tokyo</a>, Tokyo, Japan, in 2023 and 2025, respectively, where he is currently pursuing the Ph.D. degree in Information Science and Technology as a member of the <a href="https://star.rcast.u-tokyo.ac.jp/" target="_blank">Information Somatics Lab (Inami &amp; Monnai Lab), RCAST</a>. Since 2025, he has been supported by the <a href="https://spring-gx.adm.s.u-tokyo.ac.jp/en/" target="_blank">JST SPRING GX program</a>. From January to February 2026, he was a Guest Researcher at the <a href="https://www.tu-braunschweig.de/en/ifn/institute/dept/ms" target="_blank">Mobile Radio Systems Group</a>, <a href="https://www.tu-braunschweig.de/en/ifn" target="_blank">Institute for Communications Technology</a>, <a href="https://www.tu-braunschweig.de/en/" target="_blank">Technische Universität Braunschweig</a>, Germany.
+                        Ryoma Sonoyama received the B.E. degree in Mechano-Informatics and the M.S. degree in Information Science and Technology from <a href="https://www.u-tokyo.ac.jp/en/" target="_blank" rel="noopener">the University of Tokyo</a>, Tokyo, Japan, in 2023 and 2025, respectively, where he is currently pursuing the Ph.D. degree in Information Science and Technology as a member of the <a href="https://star.rcast.u-tokyo.ac.jp/" target="_blank" rel="noopener">Information Somatics Lab (Inami &amp; Monnai Lab), RCAST</a>. Since 2025, he has been supported by the <a href="https://spring-gx.adm.s.u-tokyo.ac.jp/en/" target="_blank" rel="noopener">JST SPRING GX program</a>. From January to February 2026, he was a Guest Researcher at the <a href="https://www.tu-braunschweig.de/en/ifn/institute/dept/ms" target="_blank" rel="noopener">Mobile Radio Systems Group</a>, <a href="https://www.tu-braunschweig.de/en/ifn" target="_blank" rel="noopener">Institute for Communications Technology</a>, <a href="https://www.tu-braunschweig.de/en/" target="_blank" rel="noopener">Technische Universität Braunschweig</a>, Germany.
                     </p>
-                    <p class="lang-ja" style="display:none;">
-                        園山遼馬は、2023年に<a href="https://www.u-tokyo.ac.jp/ja/" target="_blank">東京大学</a>工学部機械情報工学科を卒業し、2025年に同大学<a href="https://www.i.u-tokyo.ac.jp/index.shtml" target="_blank">情報理工学系研究科</a>システム情報学専攻修士課程を修了しました。現在、同大学同専攻博士課程に在学中で、<a href="https://star.rcast.u-tokyo.ac.jp/" target="_blank">稲見・門内研究室（先端科学技術研究センター 身体情報学分野）</a>に所属しています。2025年より<a href="https://spring-gx.adm.s.u-tokyo.ac.jp/ja/" target="_blank">JST SPRING GX</a>プロジェクト生。2026年1月から2月まで、ドイツ・<a href="https://www.tu-braunschweig.de/en/" target="_blank">ブラウンシュヴァイク工科大学</a><a href="https://www.tu-braunschweig.de/en/ifn" target="_blank">通信技術研究所</a>（<a href="https://www.tu-braunschweig.de/en/ifn/institute/dept/ms" target="_blank">Mobile Radio Systems Group</a>）に客員研究員として滞在しました。
+                    <p class="lang-ja">
+                        園山遼馬は、2023年に<a href="https://www.u-tokyo.ac.jp/ja/" target="_blank" rel="noopener">東京大学</a>工学部機械情報工学科を卒業し、2025年に同大学<a href="https://www.i.u-tokyo.ac.jp/index.shtml" target="_blank" rel="noopener">情報理工学系研究科</a>システム情報学専攻修士課程を修了しました。現在、同大学同専攻博士課程に在学中で、<a href="https://star.rcast.u-tokyo.ac.jp/" target="_blank" rel="noopener">稲見・門内研究室（先端科学技術研究センター 身体情報学分野）</a>に所属しています。2025年より<a href="https://spring-gx.adm.s.u-tokyo.ac.jp/ja/" target="_blank" rel="noopener">JST SPRING GX</a>プロジェクト生。2026年1月から2月まで、ドイツ・<a href="https://www.tu-braunschweig.de/en/" target="_blank" rel="noopener">ブラウンシュヴァイク工科大学</a><a href="https://www.tu-braunschweig.de/en/ifn" target="_blank" rel="noopener">通信技術研究所</a>（<a href="https://www.tu-braunschweig.de/en/ifn/institute/dept/ms" target="_blank" rel="noopener">Mobile Radio Systems Group</a>）に客員研究員として滞在しました。
                     </p>
                     <p class="lang-en">
                         His research interest is augmenting human abilities through technology. Since 2023, he has focused on terahertz technologies, exploring how terahertz waves can support people through wireless communication and sensing. This interest is rooted in his love of sports and of anything that pushes both mind and body.
                     </p>
-                    <p class="lang-ja" style="display:none;">
+                    <p class="lang-ja">
                         技術による人間の拡張に関心があり、2023年からはテラヘルツ技術の研究に取り組んでいます。特に最近は、テラヘルツ波を用いた無線通信・センシングによって人を支援することに興味があります。その原点には、スポーツをはじめ、頭と体を使うことが何よりも好きだという思いがあります。
                     </p>
                 </div>
 
                 <div class="profile__links">
-                    <h3 class="lang-en">Links</h3>
-                    <h3 class="lang-ja" style="display:none;">リンク</h3>
-                    
-                    <ul class="lang-en profile__link-list">
-                        <li>
-                            <a href="https://scholar.google.com/citations?hl=en&user=y8nu4VcAAAAJ" class="profile__link" onClick="ga('send', 'event', 'Google Scholar', 'click', 'Google Scholar');">
-                                <i class="fas fa-graduation-cap"></i>
-                                Google Scholar
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.linkedin.com/in/ryoma-sonoyama-a11401282/" class="profile__link">
-                                <i class="fab fa-linkedin"></i>
-                                LinkedIn
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://researchmap.jp/ryoma_sonoyama?lang=en" class="profile__link">
-                                <i class="fas fa-map-marked-alt"></i>
-                                ResearchMap
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.researchgate.net/profile/Ryoma-Sonoyama" class="profile__link">
-                                <i class="fab fa-researchgate"></i>
-                                ResearchGate
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://orcid.org/0009-0008-1538-6379" class="profile__link">
-                                <i class="fas fa-id-badge"></i>
-                                ORCID
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://jglobal.jst.go.jp/en/detail?JGLOBAL_ID=202501013155667203" class="profile__link">
-                                <i class="fas fa-database"></i>
-                                J-GLOBAL
-                            </a>
-                        </li>
-                    </ul>
-                    
-                    <ul class="lang-ja profile__link-list" style="display:none;">
-                        <li>
-                            <a href="https://scholar.google.com/citations?hl=en&user=y8nu4VcAAAAJ" class="profile__link" onClick="ga('send', 'event', 'Google Scholar', 'click', 'Google Scholar');">
-                                <i class="fas fa-graduation-cap"></i>
-                                Google Scholar
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.linkedin.com/in/ryoma-sonoyama-a11401282/" class="profile__link">
-                                <i class="fab fa-linkedin"></i>
-                                LinkedIn
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://researchmap.jp/ryoma_sonoyama?lang=en" class="profile__link">
-                                <i class="fas fa-map-marked-alt"></i>
-                                ResearchMap
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.researchgate.net/profile/Ryoma-Sonoyama" class="profile__link">
-                                <i class="fab fa-researchgate"></i>
-                                ResearchGate
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://orcid.org/0009-0008-1538-6379" class="profile__link">
-                                <i class="fas fa-id-badge"></i>
-                                ORCID
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://jglobal.jst.go.jp/en/detail?JGLOBAL_ID=202501013155667203" class="profile__link">
-                                <i class="fas fa-database"></i>
-                                J-GLOBAL
-                            </a>
-                        </li>
+                    <h3><span class="lang-en">Links</span><span class="lang-ja">リンク</span></h3>
+                    <ul class="profile__link-list">
+                        <li><a href="https://scholar.google.com/citations?hl=en&user=y8nu4VcAAAAJ" class="profile__link" target="_blank" rel="noopener"><i class="fas fa-graduation-cap"></i> Google Scholar</a></li>
+                        <li><a href="https://www.linkedin.com/in/ryoma-sonoyama-a11401282/" class="profile__link" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+                        <li><a href="https://researchmap.jp/ryoma_sonoyama?lang=en" class="profile__link" target="_blank" rel="noopener"><i class="fas fa-map-marked-alt"></i> ResearchMap</a></li>
+                        <li><a href="https://www.researchgate.net/profile/Ryoma-Sonoyama" class="profile__link" target="_blank" rel="noopener"><i class="fab fa-researchgate"></i> ResearchGate</a></li>
+                        <li><a href="https://orcid.org/0009-0008-1538-6379" class="profile__link" target="_blank" rel="noopener"><i class="fas fa-id-badge"></i> ORCID</a></li>
+                        <li><a href="https://jglobal.jst.go.jp/en/detail?JGLOBAL_ID=202501013155667203" class="profile__link" target="_blank" rel="noopener"><i class="fas fa-database"></i> J-GLOBAL</a></li>
+                        <li><a href="resource/cv/Ryoma_Sonoyama_CV.pdf" class="profile__link" target="_blank" rel="noopener"><i class="fas fa-file-pdf"></i> CV (PDF)</a></li>
                     </ul>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="cv__wrapper section__wrapper">
+    </section>
+
+    <section id="cv" class="cv__wrapper section__wrapper">
         <div class="text__wrapper">
-            <h1 class="lang-en">Curriculum Vitae</h1>
-            <h1 class="lang-ja" style="display:none;">履歴書 / Curriculum Vitae</h1>
-            
-            <div class="cv__timeline lang-en">
+            <h1><span class="lang-en">Curriculum Vitae</span><span class="lang-ja">履歴書 / Curriculum Vitae</span></h1>
+            <a class="cv__download" href="resource/cv/Ryoma_Sonoyama_CV.pdf" target="_blank" rel="noopener"><i class="fas fa-file-pdf"></i> <span class="lang-en">Download CV (PDF, English)</span><span class="lang-ja">CVをダウンロード（PDF・英語）</span></a>
+
+            <div class="cv__timeline">
                 <div class="cv__item">
                     <div class="cv__bullet"></div>
                     <div class="cv__line"></div>
                     <div class="cv__content">
-                        <span class="cv__date">Jan 2026 - Feb 2026</span>
-                        <span class="cv__text">Guest Researcher, <a href="https://www.tu-braunschweig.de/en/ifn/institute/dept/ms" target="_blank">Mobile Radio Systems Group</a>, <a href="https://www.tu-braunschweig.de/en/ifn" target="_blank">Institute for Communications Technology</a>, <a href="https://www.tu-braunschweig.de/en/" target="_blank">Technische Universität Braunschweig</a>, Germany</span>
+                        <span class="cv__date"><span class="lang-en">Jan 2026 - Feb 2026</span><span class="lang-ja">2026年1月 - 2026年2月</span></span>
+                        <span class="cv__text lang-en">Guest Researcher, <a href="https://www.tu-braunschweig.de/en/ifn/institute/dept/ms" target="_blank" rel="noopener">Mobile Radio Systems Group</a>, <a href="https://www.tu-braunschweig.de/en/ifn" target="_blank" rel="noopener">Institute for Communications Technology</a>, <a href="https://www.tu-braunschweig.de/en/" target="_blank" rel="noopener">Technische Universität Braunschweig</a>, Germany</span>
+                        <span class="cv__text lang-ja"><a href="https://www.tu-braunschweig.de/en/" target="_blank" rel="noopener">ブラウンシュヴァイク工科大学</a>　<a href="https://www.tu-braunschweig.de/en/ifn" target="_blank" rel="noopener">通信技術研究所</a>（<a href="https://www.tu-braunschweig.de/en/ifn/institute/dept/ms" target="_blank" rel="noopener">Mobile Radio Systems Group</a>）　客員研究員</span>
                     </div>
                 </div>
                 <div class="cv__item">
                     <div class="cv__bullet"></div>
                     <div class="cv__line"></div>
                     <div class="cv__content">
-                        <span class="cv__date">April 2025</span>
-                        <span class="cv__text">Enrolled in Doctoral Program, <a href="https://www.i.u-tokyo.ac.jp/index_e.shtml" target="_blank">Graduate School of Information Science and Technology</a>, University of Tokyo</span>
+                        <span class="cv__date"><span class="lang-en">April 2025</span><span class="lang-ja">2025年4月</span></span>
+                        <span class="cv__text lang-en">Enrolled in Doctoral Program, <a href="https://www.i.u-tokyo.ac.jp/index_e.shtml" target="_blank" rel="noopener">Graduate School of Information Science and Technology</a>, University of Tokyo</span>
+                        <span class="cv__text lang-ja">東京大学<a href="https://www.i.u-tokyo.ac.jp/index.shtml" target="_blank" rel="noopener">情報理工学系研究科</a>博士課程入学</span>
                     </div>
                 </div>
                 <div class="cv__item">
                     <div class="cv__bullet"></div>
                     <div class="cv__line"></div>
                     <div class="cv__content">
-                        <span class="cv__date">March 2025</span>
-                        <span class="cv__text">Completed Master's Program, <a href="https://www.i.u-tokyo.ac.jp/index_e.shtml" target="_blank">Graduate School of Information Science and Technology</a>, University of Tokyo</span>
+                        <span class="cv__date"><span class="lang-en">March 2025</span><span class="lang-ja">2025年3月</span></span>
+                        <span class="cv__text lang-en">Completed Master's Program, <a href="https://www.i.u-tokyo.ac.jp/index_e.shtml" target="_blank" rel="noopener">Graduate School of Information Science and Technology</a>, University of Tokyo</span>
+                        <span class="cv__text lang-ja">東京大学<a href="https://www.i.u-tokyo.ac.jp/index.shtml" target="_blank" rel="noopener">情報理工学系研究科</a>修士課程修了</span>
                     </div>
                 </div>
                 <div class="cv__item">
                     <div class="cv__bullet"></div>
                     <div class="cv__line"></div>
                     <div class="cv__content">
-                        <span class="cv__date">April 2023</span>
-                        <span class="cv__text">Enrolled in Master's Program, <a href="https://www.i.u-tokyo.ac.jp/index_e.shtml" target="_blank">Graduate School of Information Science and Technology</a>, University of Tokyo</span>
+                        <span class="cv__date"><span class="lang-en">April 2023</span><span class="lang-ja">2023年4月</span></span>
+                        <span class="cv__text lang-en">Enrolled in Master's Program, <a href="https://www.i.u-tokyo.ac.jp/index_e.shtml" target="_blank" rel="noopener">Graduate School of Information Science and Technology</a>, University of Tokyo</span>
+                        <span class="cv__text lang-ja">東京大学<a href="https://www.i.u-tokyo.ac.jp/index.shtml" target="_blank" rel="noopener">情報理工学系研究科</a>修士課程入学</span>
                     </div>
                 </div>
                 <div class="cv__item">
                     <div class="cv__bullet"></div>
                     <div class="cv__line"></div>
                     <div class="cv__content">
-                        <span class="cv__date">March 2023</span>
-                        <span class="cv__text">Graduated from Department of Mechano-Informatics, <a href="https://www.mech.t.u-tokyo.ac.jp/" target="_blank">School of Engineering</a>, University of Tokyo</span>
+                        <span class="cv__date"><span class="lang-en">March 2023</span><span class="lang-ja">2023年3月</span></span>
+                        <span class="cv__text lang-en">Graduated from Department of Mechano-Informatics, <a href="https://www.mech.t.u-tokyo.ac.jp/" target="_blank" rel="noopener">School of Engineering</a>, University of Tokyo</span>
+                        <span class="cv__text lang-ja">東京大学<a href="https://www.mech.t.u-tokyo.ac.jp/" target="_blank" rel="noopener">工学部機械情報工学科</a>卒業</span>
                     </div>
                 </div>
                 <div class="cv__item">
                     <div class="cv__bullet"></div>
                     <div class="cv__line"></div>
                     <div class="cv__content">
-                        <span class="cv__date">April 2018</span>
-                        <span class="cv__text">Enrolled in the <a href="https://www.c.u-tokyo.ac.jp/eng_site/" target="_blank">College of Arts and Sciences</a>, University of Tokyo (Natural Sciences I)</span>
+                        <span class="cv__date"><span class="lang-en">April 2018</span><span class="lang-ja">2018年4月</span></span>
+                        <span class="cv__text lang-en">Enrolled in the <a href="https://www.c.u-tokyo.ac.jp/eng_site/" target="_blank" rel="noopener">College of Arts and Sciences</a>, University of Tokyo (Natural Sciences I)</span>
+                        <span class="cv__text lang-ja">東京大学<a href="https://www.c.u-tokyo.ac.jp/" target="_blank" rel="noopener">理科一類</a>入学</span>
                     </div>
                 </div>
                 <div class="cv__item">
                     <div class="cv__bullet"></div>
                     <div class="cv__content">
-                        <span class="cv__date">March 2018</span>
-                        <span class="cv__text">Graduated from <a href="https://tochiku.fku.ed.jp/" target="_blank">Fukuoka Prefectural Tochiku High School</a></span>
+                        <span class="cv__date"><span class="lang-en">March 2018</span><span class="lang-ja">2018年3月</span></span>
+                        <span class="cv__text lang-en">Graduated from <a href="https://tochiku.fku.ed.jp/" target="_blank" rel="noopener">Fukuoka Prefectural Tochiku High School</a></span>
+                        <span class="cv__text lang-ja"><a href="https://tochiku.fku.ed.jp/" target="_blank" rel="noopener">福岡県立東筑高等学校</a>卒業</span>
                     </div>
                 </div>
             </div>
-            
-            <div class="cv__timeline lang-ja" style="display:none;">
-                <div class="cv__item">
-                    <div class="cv__bullet"></div>
-                    <div class="cv__line"></div>
-                    <div class="cv__content">
-                        <span class="cv__date">2026年1月 - 2026年2月</span>
-                        <span class="cv__text"><a href="https://www.tu-braunschweig.de/en/" target="_blank">ブラウンシュヴァイク工科大学</a>　<a href="https://www.tu-braunschweig.de/en/ifn" target="_blank">通信技術研究所</a>（<a href="https://www.tu-braunschweig.de/en/ifn/institute/dept/ms" target="_blank">Mobile Radio Systems Group</a>）　客員研究員</span>
-                    </div>
-                </div>
-                <div class="cv__item">
-                    <div class="cv__bullet"></div>
-                    <div class="cv__line"></div>
-                    <div class="cv__content">
-                        <span class="cv__date">2025年4月</span>
-                        <span class="cv__text">東京大学<a href="https://www.i.u-tokyo.ac.jp/index.shtml" target="_blank">情報理工学系研究科</a>博士課程入学</span>
-                    </div>
-                </div>
-                <div class="cv__item">
-                    <div class="cv__bullet"></div>
-                    <div class="cv__line"></div>
-                    <div class="cv__content">
-                        <span class="cv__date">2025年3月</span>
-                        <span class="cv__text">東京大学<a href="https://www.i.u-tokyo.ac.jp/index.shtml" target="_blank">情報理工学系研究科</a>修士課程修了</span>
-                    </div>
-                </div>
-                <div class="cv__item">
-                    <div class="cv__bullet"></div>
-                    <div class="cv__line"></div>
-                    <div class="cv__content">
-                        <span class="cv__date">2023年4月</span>
-                        <span class="cv__text">東京大学<a href="https://www.i.u-tokyo.ac.jp/index.shtml" target="_blank">情報理工学系研究科</a>修士課程入学</span>
-                    </div>
-                </div>
-                <div class="cv__item">
-                    <div class="cv__bullet"></div>
-                    <div class="cv__line"></div>
-                    <div class="cv__content">
-                        <span class="cv__date">2023年3月</span>
-                        <span class="cv__text">東京大学<a href="https://www.mech.t.u-tokyo.ac.jp/" target="_blank">工学部機械情報工学科</a>卒業</span>
-                    </div>
-                </div>
-                <div class="cv__item">
-                    <div class="cv__bullet"></div>
-                    <div class="cv__line"></div>
-                    <div class="cv__content">
-                        <span class="cv__date">2018年4月</span>
-                        <span class="cv__text">東京大学<a href="https://www.c.u-tokyo.ac.jp/" target="_blank">理科一類</a>入学</span>
-                    </div>
-                </div>
-                <div class="cv__item">
-                    <div class="cv__bullet"></div>
-                    <div class="cv__content">
-                        <span class="cv__date">2018年3月</span>
-                        <span class="cv__text"><a href="https://tochiku.fku.ed.jp/" target="_blank">福岡県立東筑高等学校</a>卒業</span>
-                    </div>
-                </div>
-            </div>
+
+            <h2><i class="fas fa-chalkboard-teacher"></i> <span class="lang-en">Teaching Experience</span><span class="lang-ja">TA 経験</span></h2>
+            <ul class="honors__list">
+                <li class="lang-en">2024 Teaching Assistant, First-Year Seminar, The University of Tokyo</li>
+                <li class="lang-ja">2024 東京大学「初年次ゼミナール」TA</li>
+                <li class="lang-en">2023 Teaching Assistant, Fundamentals of Circuits and Systems, The University of Tokyo</li>
+                <li class="lang-ja">2023 東京大学「回路とシステムの基礎」TA</li>
+            </ul>
         </div>
-    </div>
-    <div class="achievements__wrapper section__wrapper">
+    </section>
+
+    <section id="research" class="research__wrapper section__wrapper">
         <div class="text__wrapper">
-            <h1 class="lang-ja" style="display:none;">成果物一覧</h1>
-            <h1 class="lang-en">Achievements</h1>
-            
-            <!-- 国際会議発表 -->
-            <div class="achievement__category">
-                <h2 class="lang-ja" style="display:none;">
-                    <i class="fas fa-globe"></i> 国際査読付き論文
-                </h2>
-                <h2 class="lang-en">
-                    <i class="fas fa-globe"></i> Journal Papers
-                </h2>
-                <ul class="lang-ja achievement__list" style="display:none;">
-                    <li class="achievement__item">
-                        <span class="achievement__date">2026年</span>
-                        <span class="achievement__content">園山遼馬, 稲見 昌彦, 門内 靖明, "Circularly Polarized Azimuthally Omnidirectional Terahertz Fan-Beam Tracking with Electronic Polarization Synthesis," in <a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=5503871" target="_blank">IEEE Transactions on Terahertz Science and Technology</a>, doi: <a href="https://ieeexplore.ieee.org/abstract/document/11524103" target="_blank">10.1109/TTHZ.2026.3694964</a>. <em>Special Issue Series on Selected Emerging Trends in Terahertz Science and Technology.</em></span>
-                    </li>
-                    <li class="achievement__item">
-                        <span class="achievement__date">2026年3月</span>
-                        <span class="achievement__content">園山遼馬, 稲見 昌彦, 門内 靖明, "Agile Omnidirectional Terahertz Fan Beam Steering in the WR3.4 Band Based on Gimbal-Controlled Annular Aperture Excitation," in <a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=5503871" target="_blank">IEEE Transactions on Terahertz Science and Technology</a>, vol. 16, no. 3, pp. 286-295, March 2026, doi: <a href="https://ieeexplore.ieee.org/document/11202625" target="_blank">10.1109/TTHZ.2025.3620905</a>. <a href="https://mtt.org/featured_article/agile-omnidirectional-terahertz-fan-beam-steering-in-the-wr3-4-band-based-on-gimbal-controlled-annular-aperture-excitation/" target="_blank"><i class="fas fa-star"></i> IEEE MTT-S Featured Article</a></span>
-                    </li>
-                </ul>
-                <ul class="lang-en achievement__list">
-                    <li class="achievement__item">
-                        <span class="achievement__date">2026</span>
-                        <span class="achievement__content">Ryoma Sonoyama, Masahiko Inami, and Yasuaki Monnai, "Circularly Polarized Azimuthally Omnidirectional Terahertz Fan-Beam Tracking with Electronic Polarization Synthesis," in <a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=5503871" target="_blank">IEEE Transactions on Terahertz Science and Technology</a>, doi: <a href="https://ieeexplore.ieee.org/abstract/document/11524103" target="_blank">10.1109/TTHZ.2026.3694964</a>. <em>Special Issue Series on Selected Emerging Trends in Terahertz Science and Technology.</em></span>
-                    </li>
-                    <li class="achievement__item">
-                        <span class="achievement__date">March 2026</span>
-                        <span class="achievement__content">Ryoma Sonoyama, Masahiko Inami, and Yasuaki Monnai, "Agile Omnidirectional Terahertz Fan Beam Steering in the WR3.4 Band Based on Gimbal-Controlled Annular Aperture Excitation," in <a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=5503871" target="_blank">IEEE Transactions on Terahertz Science and Technology</a>, vol. 16, no. 3, pp. 286-295, March 2026, doi: <a href="https://ieeexplore.ieee.org/document/11202625" target="_blank">10.1109/TTHZ.2025.3620905</a>. <a href="https://mtt.org/featured_article/agile-omnidirectional-terahertz-fan-beam-steering-in-the-wr3-4-band-based-on-gimbal-controlled-annular-aperture-excitation/" target="_blank"><i class="fas fa-star"></i> IEEE MTT-S Featured Article</a></span>
-                    </li>
-                </ul>
-            </div>
-            <!-- 国際会議発表 -->
-            <div class="achievement__category">
-                <h2 class="lang-ja" style="display:none;">
-                    <i class="fas fa-globe"></i> 国際会議発表
-                </h2>
-                <h2 class="lang-en">
-                    <i class="fas fa-globe"></i> International Conference Presentations
-                </h2>
-                <ul class="lang-ja achievement__list" style="display:none;">
-                    <li class="achievement__item">
-                        <span class="achievement__date">2026年10月</span>
-                        <span class="achievement__content"><a href="https://www.irmmw-thz.org/conference/" target="_blank">IRMMW-THz 2026</a>, Salt Lake City (USA) - 園山遼馬, David Ulm, Thomas Kleine-Ostmann, Lorenz H. W. Loeser, Thomas Kürner, 門内 靖明「Radially-Inverted Parabolic Torus Reflector for Azimuthally Selective THz Beam Steering」</span>
-                    </li>
-                    <li class="achievement__item">
-                        <span class="achievement__date">2025年8月</span>
-                        <span class="achievement__content"><a href="https://www.irmmw-thz.org/" target="_blank">IRMMW-THz 2025</a>, Espoo (Finland) - 園山遼馬, 門内 靖明「Omnidirectional Terahertz Fan Beam Steering Using Two-axis Reflective Gimbal」pp. 1-2, doi: <a href="https://ieeexplore.ieee.org/document/11320088" target="_blank">10.1109/IRMMW-THz61557.2025.11320088</a>.</span>
-                    </li>
-                    <li class="achievement__item">
-                        <span class="achievement__date">2025年2月</span>
-                        <span class="achievement__content"><a href="https://www.icmmts.org/" target="_blank">ICMMTS2025</a>, Dubai (UAE) - 園山遼馬, 稲見 昌彦, 門内 靖明「A Compact Fan-Beam Steering Antenna With Omnidirectional Coverage in the 300 GHz Range」pp. 265-268, doi: <a href="https://ieeexplore.ieee.org/document/10926013" target="_blank">10.1109/ICMMTS62835.2025.10926013</a>.</span>
-                    </li>
-                    <li class="achievement__item">
-                        <span class="achievement__date">2024年9月</span>
-                        <span class="achievement__content"><a href="https://www.irmmw-thz.org/" target="_blank">IRMMW-THz 2024</a>, Perth (Australia) - 園山遼馬, 稲見 昌彦, 門内 靖明「A Center-Fed Tilt-Controlled Terahertz Waveguide for Circular Beam Steering」pp. 1-2, doi: <a href="https://ieeexplore.ieee.org/document/10697718" target="_blank">10.1109/IRMMW-THz60956.2024.10697718</a>.</span>
-                    </li>
-                </ul>
-                <ul class="lang-en achievement__list">
-                    <li class="achievement__item">
-                        <span class="achievement__date">October 2026</span>
-                        <span class="achievement__content"><a href="https://www.irmmw-thz.org/conference/" target="_blank">IRMMW-THz 2026</a>, Salt Lake City, USA - Ryoma Sonoyama, David Ulm, Thomas Kleine-Ostmann, Lorenz H. W. Loeser, Thomas Kürner, Yasuaki Monnai, "Radially-Inverted Parabolic Torus Reflector for Azimuthally Selective THz Beam Steering."</span>
-                    </li>
-                    <li class="achievement__item">
-                        <span class="achievement__date">August 2025</span>
-                        <span class="achievement__content"><a href="https://www.irmmw-thz.org/" target="_blank">IRMMW-THz 2025</a>, Espoo, Finland - Ryoma Sonoyama, Yasuaki Monnai, "Omnidirectional Terahertz Fan Beam Steering Using Two-axis Reflective Gimbal," pp. 1-2, doi: <a href="https://ieeexplore.ieee.org/document/11320088" target="_blank">10.1109/IRMMW-THz61557.2025.11320088</a>.</span>
-                    </li>
-                    <li class="achievement__item">
-                        <span class="achievement__date">February 2025</span>
-                        <span class="achievement__content"><a href="https://www.icmmts.org/" target="_blank">ICMMTS2025</a>, Dubai (UAE) - Ryoma Sonoyama, Masahiko Inami, Yasuaki Monnai, "A Compact Fan-Beam Steering Antenna With Omnidirectional Coverage in the 300 GHz Range," pp. 265-268, doi: <a href="https://ieeexplore.ieee.org/document/10926013" target="_blank">10.1109/ICMMTS62835.2025.10926013</a>.</span>
-                    </li>
-                    <li class="achievement__item">
-                        <span class="achievement__date">September 2024</span>
-                        <span class="achievement__content"><a href="https://www.irmmw-thz.org/" target="_blank">IRMMW-THz 2024</a>, Perth (Australia) - Ryoma Sonoyama, Masahiko Inami, Yasuaki Monnai, "A Center-Fed Tilt-Controlled Terahertz Waveguide for Circular Beam Steering," pp. 1-2, doi: <a href="https://ieeexplore.ieee.org/document/10697718" target="_blank">10.1109/IRMMW-THz60956.2024.10697718</a>.</span>
-                    </li>
-                </ul>
-            </div>
-            
-            <!-- 国内発表・展示 -->
-            <div class="achievement__category">
-                <h2 class="lang-ja" style="display:none;">
-                    <i class="fas fa-home"></i> 国内発表・展示
-                </h2>
-                <h2 class="lang-en">
-                    <i class="fas fa-home"></i> Domestic Presentations & Exhibitions
-                </h2>
-                <ul class="lang-ja achievement__list" style="display:none;">
-                    <li class="achievement__item">
-                        <span class="achievement__date">2023年9月</span>
-                        <span class="achievement__content"><a href="https://conference.vrsj.org/ac2023/" target="_blank">第28回日本バーチャルリアリティ学会大会</a>, 東京 - 園山遼馬, 旭博佑, 小谷七海, 正田千宙「聖剣を継ぐ者 - 集中の証明 -」</span>
-                    </li>
-                </ul>
-                <ul class="lang-en achievement__list">
-                    <li class="achievement__item">
-                        <span class="achievement__date">September 2023</span>
-                        <span class="achievement__content"><a href="https://conference.vrsj.org/ac2023/" target="_blank">28th Annual Conference of the Virtual Reality Society of Japan</a>, Tokyo - Ryoma Sonoyama, Hirosuke Asahi, Nanami Kotani, Chihiro Shoda "The Legend of Holy Sword - Proof of Concentration"</span>
-                    </li>
-                </ul>
-            </div>
-            
-            <!-- 受賞 -->
-            <div class="achievement__category">
-                <h2 class="lang-ja" style="display:none;">
-                    <i class="fas fa-trophy"></i> 受賞
-                </h2>
-                <h2 class="lang-en">
-                    <i class="fas fa-trophy"></i> Awards
-                </h2>
-                <ul class="lang-ja achievement__list" style="display:none;">
-                    <li class="achievement__item">
-                        <span class="achievement__date">2023年11月</span>
-                        <span class="achievement__content"><a href="https://ivrc.net/2023/" target="_blank">IVRC2023</a> 審査員賞 (上位10%) - 「聖剣を継ぐ者」</span>
-                    </li>
-                    <li class="achievement__item">
-                        <span class="achievement__date">2023年11月</span>
-                        <span class="achievement__content"><a href="https://www.ntv.co.jp/imaginarium/artist/">日テレイマジナリウム</a> 審査員奨励賞 - 「聖剣を継ぐ者」</span>
-                    </li>
-                </ul>
-                <ul class="lang-en achievement__list">
-                    <li class="achievement__item">
-                        <span class="achievement__date">November 2023</span>
-                        <span class="achievement__content"><a href="https://ivrc.net/2023/" target="_blank">IVRC2023</a> Jury Prize (top 10%) - "The Legend of Holy Sword"</span>
-                    </li>
-                    <li class="achievement__item">
-                        <span class="achievement__date">November 2023</span>
-                        <span class="achievement__content"><a href="https://www.ntv.co.jp/imaginarium/artist/">NTV Imaginarium</a> Jury Encouragement Award - "The Legend of Holy Sword"</span>
-                    </li>
-                </ul>
-            </div>
-            
-            <!-- 資格 -->
-            <div class="achievement__category">
-                <h2 class="lang-ja" style="display:none;">
-                    <i class="fas fa-certificate"></i> 資格
-                </h2>
-                <h2 class="lang-en">
-                    <i class="fas fa-certificate"></i> Qualifications
-                </h2>
-                <ul class="lang-ja achievement__list" style="display:none;">
-                    <li class="achievement__item">
-                        <span class="achievement__date">2024年1月</span>
-                        <span class="achievement__content"><a href="https://www.nichimu.or.jp/" target="_blank">第一級陸上無線技術士</a> (合格率約20%)</span>
-                    </li>
-                </ul>
-                <ul class="lang-en achievement__list">
-                    <li class="achievement__item">
-                        <span class="achievement__date">January 2024</span>
-                        <span class="achievement__content"><a href="https://www.nichimu.or.jp/" target="_blank">First-Class Radio Operator for Land Radio Stations</a> (Pass rate ~20%)</span>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <div class="research__wrapper section__wrapper">
-        <div class="text__wrapper">
-            <h1 class="lang-en">Research</h1>
-            <h1 class="lang-ja" style="display:none;">研究</h1>
-            <div class="research__overview">
-                <div>
-                    <p class="lang-en">
-                        I am interested in augmenting human abilities through technology. Recently, I have been working on terahertz wireless systems that support people, such as omnidirectional beam steering and tracking for communication and sensing.
-                    </p>
-                    <p class="lang-ja" style="display:none;">
-                        技術による人間の拡張に関心があります。最近は、テラヘルツ波で人を支援する無線システム（通信・センシングのための全方位ビーム走査・追従など）に取り組んでいます。
-                    </p>
-                </div>
-            </div>
-            <div id="publications"></div>
-            <h2 class="research__sectionTitle lang-en">Peer-Reviewed Conferences & Journals</h2>
-            <h2 class="research__sectionTitle lang-ja" style="display:none;">査読付き国際会議・ジャーナル</h2>
-            <div class="research__item">
-                <img class="research__img" src="./resource/img/thumbnail/IRMMW2026.png" alt="Radially-Inverted Parabolic Torus Reflector for Azimuthally Selective THz Beam Steering" />
+            <h1><span class="lang-en">Research</span><span class="lang-ja">研究</span></h1>
+            <p class="research__overview lang-en">
+                I am interested in augmenting human abilities through technology. Recently, I have been working on terahertz wireless systems that support people, such as omnidirectional beam steering and tracking for communication and sensing.
+            </p>
+            <p class="research__overview lang-ja">
+                技術による人間の拡張に関心があります。最近は、テラヘルツ波で人を支援する無線システム（通信・センシングのための全方位ビーム走査・追従など）に取り組んでいます。
+            </p>
+
+            <!-- Journal papers -->
+            <h2 class="research__sectionTitle"><i class="fas fa-book"></i> <span class="lang-en">Journal Papers</span><span class="lang-ja">査読付き論文誌</span></h2>
+            <article class="research__item">
+                <img class="research__img" src="./resource/img/thumbnail/circularly.svg" alt="Circularly polarized omnidirectional terahertz fan-beam tracking" width="624" height="190" loading="lazy" />
                 <div class="research__description">
-                    <h3>Radially-Inverted Parabolic Torus Reflector for Azimuthally Selective THz Beam Steering</h3>
-                    <p><b>Ryoma Sonoyama</b>, David Ulm, Thomas Kleine-Ostmann, Lorenz H. W. Loeser, Thomas Kürner, Yasuaki Monnai</p>
-                    <p><a href="https://www.irmmw-thz.org/conference/" target="_blank">IRMMW-THz 2026</a>, Salt Lake City, USA</p>
-                </div>
-            </div>
-            <div class="research__item">
-                <img class="research__img" src="./resource/img/thumbnail/circularly.svg" alt="Circularly Polarized Azimuthally Omnidirectional Terahertz Fan-Beam Tracking with Electronic Polarization Synthesis" />
-                <div class="research__description">
+                    <span class="research__date">2026</span>
                     <h3>Circularly Polarized Azimuthally Omnidirectional Terahertz Fan-Beam Tracking with Electronic Polarization Synthesis</h3>
                     <p><b>Ryoma Sonoyama</b>, Masahiko Inami, Yasuaki Monnai</p>
-                    <p><a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=5503871" target="_blank">IEEE Transactions on Terahertz Science and Technology</a>, 2026</p>
-                    <p>
-                        <i class="fas fa-file-pdf"></i>
-                        <a href="https://ieeexplore.ieee.org/abstract/document/11524103" target="_blank">IEEE Xplore</a>
+                    <p><a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=5503871" target="_blank" rel="noopener">IEEE Transactions on Terahertz Science and Technology</a>, 2026. <em>Special Issue Series on Selected Emerging Trends in Terahertz Science and Technology.</em></p>
+                    <p class="research__links">
+                        <a href="https://ieeexplore.ieee.org/abstract/document/11524103" target="_blank" rel="noopener"><i class="fas fa-file-pdf"></i>IEEE Xplore</a>
+                        <a href="https://www.linkedin.com/posts/ieee-ttst_featuring-one-of-the-october-2026-papers-activity-7520455071411707904-LodO" target="_blank" rel="noopener" class="research__badge"><i class="fas fa-star"></i><span class="lang-en">Featured by IEEE T-TST (October 2026)</span><span class="lang-ja">IEEE T-TST 2026年10月号 注目論文</span></a>
+                        <span class="research__doi">doi: 10.1109/TTHZ.2026.3694964</span>
                     </p>
                 </div>
-            </div>
-            <div class="research__item">
-                <img class="research__img" src="./resource/img/thumbnail/agile_gimbal.png" alt="Agile Omnidirectional Terahertz Fan Beam Steering in the WR3.4 Band Based on Gimbal-Controlled Annular Aperture Excitation" />
+            </article>
+            <article class="research__item">
+                <img class="research__img" src="./resource/img/thumbnail/agile_gimbal.png" alt="Gimbal-controlled annular aperture for terahertz fan-beam steering" width="389" height="260" loading="lazy" />
                 <div class="research__description">
+                    <span class="research__date"><span class="lang-en">March 2026</span><span class="lang-ja">2026年3月</span></span>
                     <h3>Agile Omnidirectional Terahertz Fan Beam Steering in the WR3.4 Band Based on Gimbal-Controlled Annular Aperture Excitation</h3>
                     <p><b>Ryoma Sonoyama</b>, Masahiko Inami, Yasuaki Monnai</p>
-                    <p><a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=5503871" target="_blank">IEEE Transactions on Terahertz Science and Technology</a>, vol. 16, no. 3, pp. 286-295, 2026</p>
-                    <p>
-                        <i class="fas fa-file-pdf"></i>
-                        <a href="https://ieeexplore.ieee.org/document/11202625" target="_blank">IEEE Xplore</a>&nbsp;
-                        <i class="fas fa-star"></i>
-                        <a href="https://mtt.org/featured_article/agile-omnidirectional-terahertz-fan-beam-steering-in-the-wr3-4-band-based-on-gimbal-controlled-annular-aperture-excitation/" target="_blank">IEEE MTT-S Featured Article</a>
+                    <p><a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=5503871" target="_blank" rel="noopener">IEEE Transactions on Terahertz Science and Technology</a>, vol. 16, no. 3, pp. 286-295, 2026</p>
+                    <p class="research__links">
+                        <a href="https://ieeexplore.ieee.org/document/11202625" target="_blank" rel="noopener"><i class="fas fa-file-pdf"></i>IEEE Xplore</a>
+                        <a href="https://mtt.org/featured_article/agile-omnidirectional-terahertz-fan-beam-steering-in-the-wr3-4-band-based-on-gimbal-controlled-annular-aperture-excitation/" target="_blank" rel="noopener" class="research__badge"><i class="fas fa-star"></i>IEEE MTT-S Featured Article</a>
+                        <span class="research__doi">doi: 10.1109/TTHZ.2025.3620905</span>
                     </p>
                 </div>
-            </div>
-            <div class="research__item">
-                <img class="research__img" src="./resource/img/thumbnail/irmmw2025.jpg" alt="Omnidirectional Terahertz Fan Beam Steering Using Two-axis Reflective Gimbal" />
+            </article>
+
+            <!-- International conferences -->
+            <h2 class="research__sectionTitle"><i class="fas fa-globe"></i> <span class="lang-en">International Conferences</span><span class="lang-ja">国際会議発表</span></h2>
+            <article class="research__item">
+                <img class="research__img" src="./resource/img/thumbnail/IRMMW2026.png" alt="Radially-inverted parabolic torus reflector" width="800" height="454" loading="lazy" />
                 <div class="research__description">
+                    <span class="research__date"><span class="lang-en">October 2026</span><span class="lang-ja">2026年10月</span></span>
+                    <h3>Radially-Inverted Parabolic Torus Reflector for Azimuthally Selective THz Beam Steering</h3>
+                    <p><b>Ryoma Sonoyama</b>, David Ulm, Thomas Kleine-Ostmann, Lorenz H. W. Loeser, Thomas Kürner, Yasuaki Monnai</p>
+                    <p><a href="https://www.irmmw-thz.org/conference/" target="_blank" rel="noopener">IRMMW-THz 2026</a>, Salt Lake City, USA</p>
+                </div>
+            </article>
+            <article class="research__item">
+                <img class="research__img" src="./resource/img/thumbnail/irmmw2025.jpg" alt="Two-axis reflective gimbal for terahertz fan-beam steering" width="800" height="511" loading="lazy" />
+                <div class="research__description">
+                    <span class="research__date"><span class="lang-en">August 2025</span><span class="lang-ja">2025年8月</span></span>
                     <h3>Omnidirectional Terahertz Fan Beam Steering Using Two-axis Reflective Gimbal</h3>
                     <p><b>Ryoma Sonoyama</b>, Yasuaki Monnai</p>
-                    <p><a href="https://www.irmmw-thz.org/" target="_blank">IRMMW-THz 2025</a>, Espoo, Finland</p>
-                    <p>
-                        <i class="fas fa-file-pdf"></i>
-                        <a href="https://ieeexplore.ieee.org/document/11320088" target="_blank">IEEE Xplore</a>
+                    <p><a href="https://www.irmmw-thz.org/" target="_blank" rel="noopener">IRMMW-THz 2025</a>, Espoo, Finland, pp. 1-2</p>
+                    <p class="research__links">
+                        <a href="https://ieeexplore.ieee.org/document/11320088" target="_blank" rel="noopener"><i class="fas fa-file-pdf"></i>IEEE Xplore</a>
+                        <span class="research__doi">doi: 10.1109/IRMMW-THz61557.2025.11320088</span>
                     </p>
                 </div>
-            </div>
-            <div class="research__item">
-                <img class="research__img" src="./resource/img/thumbnail/icmmts2025.png" alt="A Compact Fan-Beam Steering Antenna With Omnidirectional Coverage in the 300 GHz Range" />
+            </article>
+            <article class="research__item">
+                <img class="research__img" src="./resource/img/thumbnail/icmmts2025.jpg" alt="Compact fan-beam steering antenna in the 300 GHz range" width="800" height="286" loading="lazy" />
                 <div class="research__description">
+                    <span class="research__date"><span class="lang-en">February 2025</span><span class="lang-ja">2025年2月</span></span>
                     <h3>A Compact Fan-Beam Steering Antenna With Omnidirectional Coverage in the 300 GHz Range</h3>
                     <p><b>Ryoma Sonoyama</b>, Masahiko Inami, Yasuaki Monnai</p>
-                    <p><a href="https://www.icmmts.org/" target="_blank">ICMMTS 2025</a>, Dubai, UAE</p>
-                    <p>
-                        <i class="fas fa-file-pdf"></i>
-                        <a href="https://ieeexplore.ieee.org/document/10926013" target="_blank">IEEE Xplore</a>
+                    <p><a href="https://www.icmmts.org/" target="_blank" rel="noopener">ICMMTS 2025</a>, Dubai, UAE, pp. 265-268</p>
+                    <p class="research__links">
+                        <a href="https://ieeexplore.ieee.org/document/10926013" target="_blank" rel="noopener"><i class="fas fa-file-pdf"></i>IEEE Xplore</a>
+                        <span class="research__doi">doi: 10.1109/ICMMTS62835.2025.10926013</span>
                     </p>
                 </div>
-            </div>
-            <div class="research__item">
-                <img class="research__img" src="./resource/img/thumbnail/irmmw2024.png" alt="A Center-Fed Tilt-Controlled Terahertz Waveguide for Circular Beam Steering" />
+            </article>
+            <article class="research__item">
+                <img class="research__img" src="./resource/img/thumbnail/irmmw2024.jpg" alt="Center-fed tilt-controlled terahertz waveguide" width="800" height="512" loading="lazy" />
                 <div class="research__description">
+                    <span class="research__date"><span class="lang-en">September 2024</span><span class="lang-ja">2024年9月</span></span>
                     <h3>A Center-Fed Tilt-Controlled Terahertz Waveguide for Circular Beam Steering</h3>
                     <p><b>Ryoma Sonoyama</b>, Masahiko Inami, Yasuaki Monnai</p>
-                    <p><a href="https://www.irmmw-thz.org/" target="_blank">IRMMW-THz 2024</a>, Perth, Australia</p>
-                    <p>
-                        <i class="fas fa-file-pdf"></i>
-                        <a href="https://ieeexplore.ieee.org/document/10697718" target="_blank">IEEE Xplore</a>
+                    <p><a href="https://www.irmmw-thz.org/" target="_blank" rel="noopener">IRMMW-THz 2024</a>, Perth, Australia, pp. 1-2</p>
+                    <p class="research__links">
+                        <a href="https://ieeexplore.ieee.org/document/10697718" target="_blank" rel="noopener"><i class="fas fa-file-pdf"></i>IEEE Xplore</a>
+                        <span class="research__doi">doi: 10.1109/IRMMW-THz60956.2024.10697718</span>
                     </p>
                 </div>
-            </div>
-            <h2 class="research__sectionTitle">Workshops, Posters, and Demos</h2>
-            <div class="research__item">
-                <img class="research__img" src="./resource/img/thumbnail/Seiken.png" />
+            </article>
+
+            <!-- Domestic presentations, demos -->
+            <h2 class="research__sectionTitle"><i class="fas fa-desktop"></i> <span class="lang-en">Domestic Presentations &amp; Demos</span><span class="lang-ja">国内発表・展示</span></h2>
+            <article class="research__item">
+                <img class="research__img" src="./resource/img/thumbnail/Seiken.png" alt="The Legend of Holy Sword demo" width="800" height="443" loading="lazy" />
                 <div class="research__description">
-                    <h3>聖剣を継ぐ者 - 集中の証明 - | The Legend of Holy Sword - Proof of Concentration</h3>
-                    <p><b>Ryoma Sonoyama</b>*, Hirosuke Asahi*, Nanami Kotani*,  Chihiro Shoda* (*: equal contribution)</p>
-                    <p class="lang-en"><a href="https://ivrc.net/2023/" target="_blank">IVRC 2023</a> Demonstration (<i class="fas fa-medal"></i>: Jury Prize)</p>
-                    <p class="lang-ja" style="display:none;"><a href="https://ivrc.net/2023/" target="_blank">IVRC 2023</a> デモ発表 (<i class="fas fa-medal"></i>: 審査員賞)</p>
-                    <p>
-                        <i class="fas fa-file-pdf"></i>
-                        <a href="https://conference.vrsj.org/ac2023/program/doc/IVRC-03.pdf">Paper</a>&nbsp;
-                        <i class="fas fa-file-alt"></i>
-                        <a href="https://arxiv.org/abs/2408.16782">arXiv</a>&nbsp;
-                        <i class="fas fa-file-video"></i>
-                        <a href="https://youtu.be/iUkLfrCzRpg?feature=shared">Video</a>
+                    <span class="research__date"><span class="lang-en">September 2023</span><span class="lang-ja">2023年9月</span></span>
+                    <h3><span class="lang-en">The Legend of Holy Sword - Proof of Concentration</span><span class="lang-ja">聖剣を継ぐ者 - 集中の証明 -</span></h3>
+                    <p><b>Ryoma Sonoyama</b>*, Hirosuke Asahi*, Nanami Kotani*, Chihiro Shoda* <span class="lang-en">(*: equal contribution)</span><span class="lang-ja">（*: 同等貢献）</span></p>
+                    <p class="lang-en"><a href="https://ivrc.net/2023/" target="_blank" rel="noopener">IVRC 2023</a> Demonstration / <a href="https://conference.vrsj.org/ac2023/" target="_blank" rel="noopener">28th Annual Conference of the Virtual Reality Society of Japan</a>, Tokyo</p>
+                    <p class="lang-ja"><a href="https://ivrc.net/2023/" target="_blank" rel="noopener">IVRC 2023</a> デモ発表 / <a href="https://conference.vrsj.org/ac2023/" target="_blank" rel="noopener">第28回日本バーチャルリアリティ学会大会</a>, 東京</p>
+                    <p class="research__links">
+                        <span class="research__badge"><i class="fas fa-medal"></i><span class="lang-en">IVRC 2023 Jury Prize</span><span class="lang-ja">IVRC 2023 審査員賞</span></span>
+                        <span class="research__badge"><i class="fas fa-medal"></i><span class="lang-en">NTV Imaginarium Jury Encouragement Award</span><span class="lang-ja">日テレイマジナリウム 審査員奨励賞</span></span>
+                    </p>
+                    <p class="research__links">
+                        <a href="https://conference.vrsj.org/ac2023/program/doc/IVRC-03.pdf" target="_blank" rel="noopener"><i class="fas fa-file-pdf"></i>Paper</a>
+                        <a href="https://arxiv.org/abs/2408.16782" target="_blank" rel="noopener"><i class="fas fa-file-alt"></i>arXiv</a>
+                        <a href="https://youtu.be/iUkLfrCzRpg?feature=shared" target="_blank" rel="noopener"><i class="fas fa-file-video"></i>Video</a>
+                        <a href="https://www.itmedia.co.jp/news/articles/2311/16/news046.html" target="_blank" rel="noopener"><i class="fas fa-newspaper"></i><span class="lang-en">ITmedia NEWS</span><span class="lang-ja">ITmedia NEWS 掲載</span></a>
                     </p>
                 </div>
-            </div>
-            <h2 class="research__sectionTitle lang-en">Research Video</h2>
-            <h2 class="research__sectionTitle lang-ja" style="display:none;">研究動画</h2>
-            <div class="research__video-container">
-                <div class="video-wrapper">
-                    <iframe 
-                        width="560" 
-                        height="315" 
-                        src="https://www.youtube.com/embed/3TmtBB_cxNU" 
-                        title="YouTube video player" 
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                        allowfullscreen>
-                    </iframe>
-                </div>
+            </article>
+
+            <h2 class="research__sectionTitle"><i class="fas fa-video"></i> <span class="lang-en">Research Video</span><span class="lang-ja">研究動画</span></h2>
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube-nocookie.com/embed/3TmtBB_cxNU" title="Research video" loading="lazy"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
             </div>
         </div>
-    </div>
+    </section>
 
-    <div class="awards__wrapper section__wrapper">
+    <section id="honors" class="awards__wrapper section__wrapper">
         <div class="text__wrapper">
-            <h1 class="lang-en">Honors and Awards</h1>
-            <h1 class="lang-ja" style="display:none;">受賞・表彰</h1>
-            <h2 class="lang-en">Fellowship, Scholarship and Grant-in-Aid</h2>
-            <h2 class="lang-ja" style="display:none;">フェローシップ・奨学金・助成金</h2>
-            <ul class="lang-ja" style="display:none;">
-                <li>2026年度 <a href="https://spring-gx.adm.s.u-tokyo.ac.jp/ja/" target="_blank">SPRING GX</a> 海外渡航プログラム (Collaborating Professor: <a href="https://www.tu-braunschweig.de/en/ifn/institute/dept/ms" target="_blank">Thomas Kürner</a>)</li>
-                <li>2026年度 <a href="https://www.marubun-zaidan.jp/" target="_blank">丸文財団国際研究交流助成</a> (IRMMW-THz 2026)</li>
-                <li>2026年度 <a href="https://spring-gx.adm.s.u-tokyo.ac.jp/ja/" target="_blank">SPRING GX</a> 国際会議派遣プログラム (IRMMW-THz 2026)</li>
-                <li>2025年度 <a href="https://www.marubun-zaidan.jp/r07_sonoyama.html" target="_blank">丸文財団国際研究交流助成</a> (IRMMW-THz 2025)</li>
-                <li>2025年度 <a href="https://spring-gx.adm.s.u-tokyo.ac.jp/ja/" target="_blank">SPRING GX</a> 国際会議派遣プログラム (IRMMW-THz 2025)</li>
-                <li>2025年4月-2028年3月 <a href="https://www.jst.go.jp/jisedai/spring/" target="_blank">JST次世代研究者挑戦的研究プログラム（SPRING）</a> 東京大学「<a href="https://spring-gx.adm.s.u-tokyo.ac.jp/ja/" target="_blank">グリーントランスフォーメーション（GX）を先導する高度人材育成（SPRING GX）</a>」プロジェクト生</li>
+            <h1><span class="lang-en">Honors and Awards</span><span class="lang-ja">受賞・表彰</span></h1>
+
+            <h2><span class="lang-en">Fellowship, Scholarship and Grant-in-Aid</span><span class="lang-ja">フェローシップ・奨学金・助成金</span></h2>
+            <ul class="lang-ja honors__list">
+                <li>2026年度 <a href="https://spring-gx.adm.s.u-tokyo.ac.jp/ja/" target="_blank" rel="noopener">SPRING GX</a> 海外渡航プログラム (Collaborating Professor: <a href="https://www.tu-braunschweig.de/en/ifn/institute/dept/ms" target="_blank" rel="noopener">Thomas Kürner</a>)</li>
+                <li>2026年度 <a href="https://www.marubun-zaidan.jp/r08_sonoyama.html" target="_blank" rel="noopener">丸文財団国際研究交流助成</a> (IRMMW-THz 2026)</li>
+                <li>2026年度 <a href="https://spring-gx.adm.s.u-tokyo.ac.jp/ja/" target="_blank" rel="noopener">SPRING GX</a> 国際会議派遣プログラム (IRMMW-THz 2026)</li>
+                <li>2025年度 <a href="https://www.marubun-zaidan.jp/r07_sonoyama.html" target="_blank" rel="noopener">丸文財団国際研究交流助成</a> (IRMMW-THz 2025)</li>
+                <li>2025年度 <a href="https://spring-gx.adm.s.u-tokyo.ac.jp/ja/" target="_blank" rel="noopener">SPRING GX</a> 国際会議派遣プログラム (IRMMW-THz 2025)</li>
+                <li>2025年4月-2028年3月 <a href="https://www.jst.go.jp/jisedai/spring/" target="_blank" rel="noopener">JST次世代研究者挑戦的研究プログラム（SPRING）</a> 東京大学「<a href="https://spring-gx.adm.s.u-tokyo.ac.jp/ja/" target="_blank" rel="noopener">グリーントランスフォーメーション（GX）を先導する高度人材育成（SPRING GX）</a>」プロジェクト生</li>
                 <li>2024年度 公益財団法人岩垂奨学会奨学生</li>
             </ul>
-            <ul class="lang-en">
-                <li><a href="https://spring-gx.adm.s.u-tokyo.ac.jp/en/" target="_blank">SPRING GX</a> Overseas Dispatch Program (Collaborating Professor: <a href="https://www.tu-braunschweig.de/en/ifn/institute/dept/ms" target="_blank">Thomas Kürner</a>) 2026</li>
-                <li><a href="https://www.marubun-zaidan.jp/" target="_blank">Marubun Foundation International Research Exchange Grant</a>, FY2026 (IRMMW-THz 2026)</li>
-                <li><a href="https://spring-gx.adm.s.u-tokyo.ac.jp/en/" target="_blank">SPRING GX</a> International Conference Travel Program, FY2026 (IRMMW-THz 2026)</li>
-                <li><a href="https://www.marubun-zaidan.jp/r07_sonoyama.html" target="_blank">Marubun Foundation International Research Exchange Grant</a>, FY2025 (IRMMW-THz 2025)</li>
-                <li><a href="https://spring-gx.adm.s.u-tokyo.ac.jp/en/" target="_blank">SPRING GX</a> International Conference Travel Program, FY2025 (IRMMW-THz 2025)</li>
-                <li><a href="https://www.jst.go.jp/jisedai/spring/en/" target="_blank">JST SPRING</a> <a href="https://spring-gx.adm.s.u-tokyo.ac.jp/en/" target="_blank">GX Program</a>, University of Tokyo, April 2025 - March 2028</li>
+            <ul class="lang-en honors__list">
+                <li><a href="https://spring-gx.adm.s.u-tokyo.ac.jp/en/" target="_blank" rel="noopener">SPRING GX</a> Overseas Dispatch Program (Collaborating Professor: <a href="https://www.tu-braunschweig.de/en/ifn/institute/dept/ms" target="_blank" rel="noopener">Thomas Kürner</a>), FY2026</li>
+                <li><a href="https://www.marubun-zaidan.jp/r08_sonoyama.html" target="_blank" rel="noopener">Marubun Foundation International Research Exchange Grant</a>, FY2026 (IRMMW-THz 2026)</li>
+                <li><a href="https://spring-gx.adm.s.u-tokyo.ac.jp/en/" target="_blank" rel="noopener">SPRING GX</a> International Conference Travel Program, FY2026 (IRMMW-THz 2026)</li>
+                <li><a href="https://www.marubun-zaidan.jp/r07_sonoyama.html" target="_blank" rel="noopener">Marubun Foundation International Research Exchange Grant</a>, FY2025 (IRMMW-THz 2025)</li>
+                <li><a href="https://spring-gx.adm.s.u-tokyo.ac.jp/en/" target="_blank" rel="noopener">SPRING GX</a> International Conference Travel Program, FY2025 (IRMMW-THz 2025)</li>
+                <li><a href="https://www.jst.go.jp/jisedai/spring/en/" target="_blank" rel="noopener">JST SPRING</a> <a href="https://spring-gx.adm.s.u-tokyo.ac.jp/en/" target="_blank" rel="noopener">GX Program</a>, University of Tokyo, April 2025 - March 2028</li>
                 <li>Iwadare Scholarship Foundation, FY2024</li>
             </ul>
-            <h2 class="lang-en">Academic Honors and Awards</h2>
-            <h2 class="lang-ja" style="display:none;">学術表彰・受賞</h2>
-            <ul>
-                <li class="lang-en">2023.11 Jury Prize, <a href="https://ivrc.net/2023/" target="_blank">IVRC2023</a> (top 10%) [<i>聖剣を継ぐ者</i>]</li>
-                <li class="lang-ja" style="display:none;">2023.11 <a href="https://ivrc.net/2023/" target="_blank">IVRC2023</a> 審査員賞 (上位10%) [<i>聖剣を継ぐ者</i>]</li>
+
+            <h2><span class="lang-en">Awards</span><span class="lang-ja">受賞</span></h2>
+            <ul class="lang-en honors__list">
+                <li>2023.11 Jury Prize (top 10%), <a href="https://ivrc.net/2023/" target="_blank" rel="noopener">IVRC 2023</a> [<i>The Legend of Holy Sword</i>]</li>
+                <li>2023.11 Jury Encouragement Award, <a href="https://www.ntv.co.jp/imaginarium/artist/" target="_blank" rel="noopener">NTV Imaginarium</a> [<i>The Legend of Holy Sword</i>]</li>
+                <li>2021 Most Improved Player, <a href="https://www.tokyowarriors.com/" target="_blank" rel="noopener">UTokyo Warriors</a> (American Football) [#76]</li>
             </ul>
-            <h2 class="lang-en">Other Awards and Honors</h2>
-            <h2 class="lang-ja" style="display:none;">その他の表彰・受賞</h2>
-            <ul>
-                <li class="lang-en">2021 Most Improved Player, <a href="https://www.tokyowarriors.com/" target="_blank">UTokyo Warriors</a> (American Football) [#76]</li>
-                <li class="lang-ja" style="display:none;">2021 Most Improved Player, <a href="https://www.tokyowarriors.com/" target="_blank">東京大学WARRIORS</a>（アメリカンフットボール部）[#76]</li>
+            <ul class="lang-ja honors__list">
+                <li>2023.11 <a href="https://ivrc.net/2023/" target="_blank" rel="noopener">IVRC2023</a> 審査員賞 (上位10%) [<i>聖剣を継ぐ者</i>]</li>
+                <li>2023.11 <a href="https://www.ntv.co.jp/imaginarium/artist/" target="_blank" rel="noopener">日テレイマジナリウム</a> 審査員奨励賞 [<i>聖剣を継ぐ者</i>]</li>
+                <li>2021 Most Improved Player, <a href="https://www.tokyowarriors.com/" target="_blank" rel="noopener">東京大学WARRIORS</a>（アメリカンフットボール部）[#76]</li>
+            </ul>
+
+            <h2><span class="lang-en">Qualifications</span><span class="lang-ja">資格</span></h2>
+            <ul class="honors__list">
+                <li class="lang-en">2024.01 <a href="https://www.nichimu.or.jp/" target="_blank" rel="noopener">First-Class Radio Operator for Land Radio Stations</a> (pass rate ~20%)</li>
+                <li class="lang-ja">2024.01 <a href="https://www.nichimu.or.jp/" target="_blank" rel="noopener">第一級陸上無線技術士</a> (合格率約20%)</li>
             </ul>
         </div>
-    </div>
+    </section>
 
-    <div class="media__wrapper section__wrapper">
+    <section id="football" class="football__wrapper section__wrapper">
         <div class="text__wrapper">
-            <h1 class="lang-en">Media Coverage</h1>
-            <h1 class="lang-ja" style="display:none;">メディア掲載</h1>
-            <ul>
-                <li>2023.11 ITmedia NEWS,
-                    <a href="https://www.itmedia.co.jp/news/articles/2311/16/news046.html">集中力を高めないと抜けない"聖剣" 東大が開発 脳波と視線で集中力を推定</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-
-    <div class="football__wrapper section__wrapper">
-        <div class="text__wrapper">
-            <h1 class="lang-en">American Football</h1>
-            <h1 class="lang-ja" style="display:none;">アメリカンフットボール</h1>
-            <p class="lang-en">Alumni of <a href="https://www.tokyowarriors.com/" target="_blank">UTokyo Warriors</a>, #76. <i class="fas fa-medal"></i> Most Improved Player 2021.</p>
-            <p class="lang-ja" style="display:none;"><a href="https://www.tokyowarriors.com/" target="_blank">東京大学WARRIORS</a>（アメリカンフットボール部）OB, #76。<i class="fas fa-medal"></i> 2021年 Most Improved Player 受賞。</p>
+            <h1><span class="lang-en">American Football</span><span class="lang-ja">アメリカンフットボール</span></h1>
+            <p class="lang-en">Alumni of <a href="https://www.tokyowarriors.com/" target="_blank" rel="noopener">UTokyo Warriors</a>, #76. <i class="fas fa-medal"></i> Most Improved Player 2021.</p>
+            <p class="lang-ja"><a href="https://www.tokyowarriors.com/" target="_blank" rel="noopener">東京大学WARRIORS</a>（アメリカンフットボール部）OB, #76。<i class="fas fa-medal"></i> 2021年 Most Improved Player 受賞。</p>
             <div class="football__gallery">
-                <img class="football__img" src="./resource/img/football/huddle.jpg" alt="American football, #76" loading="lazy" />
-                <img class="football__img" src="./resource/img/football/line_up.jpg" alt="American football, #76" loading="lazy" />
-                <img class="football__img" src="./resource/img/football/pass_protection.jpg" alt="American football, #76" loading="lazy" />
-                <img class="football__img" src="./resource/img/football/white_jersey.jpg" alt="American football, #76" loading="lazy" />
+                <img class="football__img" src="./resource/img/football/huddle.jpg" alt="Huddle, #76" width="1600" height="1067" loading="lazy" />
+                <img class="football__img" src="./resource/img/football/line_up.jpg" alt="Line up, #76" width="1600" height="1067" loading="lazy" />
+                <img class="football__img" src="./resource/img/football/pass_protection.jpg" alt="Pass protection, #76" width="1600" height="1067" loading="lazy" />
+                <img class="football__img" src="./resource/img/football/white_jersey.jpg" alt="#76 in white jersey" width="1600" height="1067" loading="lazy" />
             </div>
         </div>
-    </div>
+    </section>
 
-    <div class="contact__wrapper section__wrapper">
+    <section id="contact" class="contact__wrapper section__wrapper">
         <div class="text__wrapper">
-            <h1 class="lang-en">Contact</h1>
-            <h1 class="lang-ja" style="display:none;">連絡先</h1>
+            <h1><span class="lang-en">Contact</span><span class="lang-ja">連絡先</span></h1>
             <p>ryoma.sonoyama [at] star.rcast.u-tokyo.ac.jp</p>
-            <p><a href="https://star.rcast.u-tokyo.ac.jp/" target="_blank">Information Somatics Lab (Inami &amp; Monnai Lab)</a>, <a href="https://www.rcast.u-tokyo.ac.jp/en/" target="_blank">Research Center for Advanced Science and Technology (RCAST)</a>, <a href="https://www.u-tokyo.ac.jp/en/" target="_blank">The University of Tokyo</a></p>
+            <p><a href="https://star.rcast.u-tokyo.ac.jp/" target="_blank" rel="noopener">Information Somatics Lab (Inami &amp; Monnai Lab)</a>, <a href="https://www.rcast.u-tokyo.ac.jp/en/" target="_blank" rel="noopener">Research Center for Advanced Science and Technology (RCAST)</a>, <a href="https://www.u-tokyo.ac.jp/en/" target="_blank" rel="noopener">The University of Tokyo</a></p>
         </div>
-    </div>
-    <div style="text-align:center; color:#888; font-size:14px; margin: 40px 0 10px 0;">
-        Last updated: 10/20/2026
-    </div>
+    </section>
+    </main>
+
+    <footer class="footer">Last updated: 11/16/2026</footer>
+
     <script>
         function switchLang(lang) {
-            document.querySelectorAll('.lang-ja').forEach(el => el.style.display = (lang === 'ja' ? '' : 'none'));
-            document.querySelectorAll('.lang-en').forEach(el => el.style.display = (lang === 'en' ? '' : 'none'));
-            
-            // Update button styles to show active language
-            document.getElementById('lang-ja').style.fontWeight = (lang === 'ja' ? 'bold' : 'normal');
-            document.getElementById('lang-en').style.fontWeight = (lang === 'en' ? 'bold' : 'normal');
-            
-            // Update button classes for styling
+            document.documentElement.lang = lang;
             document.getElementById('lang-ja').classList.toggle('active', lang === 'ja');
             document.getElementById('lang-en').classList.toggle('active', lang === 'en');
+            try { localStorage.setItem('lang', lang); } catch (e) {}
         }
-        
-        // Initialize page with English language
-        document.addEventListener('DOMContentLoaded', function() {
-            switchLang('en');
-            
-            // Add scroll animations
-            addScrollAnimations();
-            
-            // Add parallax effect to header
-            addParallaxEffect();
-            
-            // Add smooth reveal animations
-            addRevealAnimations();
-        });
-        
-        // Scroll animations for elements
-        function addScrollAnimations() {
-            const observerOptions = {
-                threshold: 0.1,
-                rootMargin: '0px 0px -50px 0px'
-            };
-            
+
+        document.addEventListener('DOMContentLoaded', function () {
+            switchLang(document.documentElement.lang === 'ja' ? 'ja' : 'en');
+
+            // Fade sections in as they enter the viewport.
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         entry.target.classList.add('animate-in');
+                        observer.unobserve(entry.target);
                     }
                 });
-            }, observerOptions);
-            
-            // Observe all sections
-            document.querySelectorAll('.section__wrapper').forEach(section => {
-                observer.observe(section);
-            });
-        }
-        
-        // Parallax effect for header
-        function addParallaxEffect() {
-            window.addEventListener('scroll', () => {
-                const scrolled = window.pageYOffset;
-                const header = document.querySelector('.header__wrapper');
-                header.style.transform = `translateY(${scrolled * 0.5}px)`;
-            });
-        }
-        
-        // Reveal animations for achievement items
-        function addRevealAnimations() {
-            const achievementItems = document.querySelectorAll('.achievement__item');
-            
-            const itemObserver = new IntersectionObserver((entries) => {
-                entries.forEach((entry, index) => {
-                    if (entry.isIntersecting) {
-                        setTimeout(() => {
-                            entry.target.classList.add('reveal');
-                        }, index * 100);
-                    }
-                });
-            }, { threshold: 0.3 });
-            
-            achievementItems.forEach(item => itemObserver.observe(item));
-        }
-        
-        // Smooth scroll for navigation links
-        document.addEventListener('DOMContentLoaded', function() {
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    const target = document.querySelector(this.getAttribute('href'));
-                    if (target) {
-                        target.scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'start'
-                        });
-                    }
-                });
-            });
+            }, { threshold: 0.05 });
+            document.querySelectorAll('.section__wrapper').forEach(section => observer.observe(section));
         });
     </script>
 </body>

@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /resource/cv/cv.html
+
+Sitemap: https://ryomasonoyama.github.io/sitemap.xml
